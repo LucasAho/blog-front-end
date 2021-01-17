@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Header from './components/Header/Header.component';
+import { ThemeProvider } from '@material-ui/core/styles';
+import theme from './components/Theme/theme.component';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Header />
+    <ThemeProvider theme={theme}>
+      <Header />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

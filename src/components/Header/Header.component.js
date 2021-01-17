@@ -2,8 +2,6 @@ import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import indigo from '@material-ui/core/colors/indigo';
-import blue from '@material-ui/core/colors/blue';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -15,30 +13,31 @@ import Badge from '@material-ui/core/Badge';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 
 
-const useStyles = makeStyles((theme: Theme) => createStyles({
+const useStyles = makeStyles((theme) => createStyles({
   root: {
-      color: blue[800],
-      secondary: {
-        main: indigo[900],
-      }
-    },
-  grow: {
     flexGrow: 1,
   },
   menuButton: {
     marginRight: theme.spacing(2),
   },
+  toolbar: {
+    minHeight: 128,
+    alignItems: 'flexstart',
+    paddingTop: theme.spacing(1),
+    paddingBottom: theme.spacing(2),
+  },
   title: {
-    marginLeft: theme.spacing(55), //needs to be centered dynamically
+    marginLeft: theme.spacing(45), //needs to be centered dynamically
     display: 'none',
     [theme.breakpoints.up('sm')]: {
       display: 'block',
     },
   },
 
-
+  
+/*unused classes
   inputRoot: {
-    //color: 'inherit',
+    color: 'inherit',
   },
   inputInput: {
     padding: theme.spacing(1, 1, 1, 0),
@@ -50,6 +49,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
       width: '20ch',
     },
   },
+   */
   sectionDesktop: {
     display: 'none',
     [theme.breakpoints.up('md')]: {
@@ -62,8 +62,10 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
       display: 'none',
     },
   },
+ 
 }));
-export default function PrimarySearchAppBar() {
+
+export default function HeadAppBar() {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -146,9 +148,12 @@ export default function PrimarySearchAppBar() {
   );
 
   return (
-    <div className={classes.grow}>
-      <AppBar position="static" color={classes.root}>
-        <Toolbar>
+    <div className={classes.root}>
+      <AppBar position="static">
+        <Toolbar 
+          className={classes.toolbar}
+          color='primary'
+        >
           <IconButton
             edge="start"
             className={classes.menuButton}
@@ -157,10 +162,10 @@ export default function PrimarySearchAppBar() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography className={classes.title} variant="h6" noWrap>
+          <Typography className={classes.title} variant="h3" noWrap>
             Lucas Asher
           </Typography>
-          <div className={classes.grow} />
+          <div className={classes.root} />
           <div className={classes.sectionDesktop}>
             <IconButton aria-label="show 17 new notifications" color="inherit">
               <Badge badgeContent={17} color="secondary">
