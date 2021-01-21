@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Header from './components/Header/Header.component';
+import ProjectBar from './components/SectionB/sectionB.component';
 import { ThemeProvider } from '@material-ui/core/styles';
 import theme from './components/Theme/theme.component';
 
@@ -10,6 +11,7 @@ ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <Header />
+      <ProjectBar />
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')

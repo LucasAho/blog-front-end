@@ -9,9 +9,9 @@ import Menu from '@material-ui/core/Menu';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import Badge from '@material-ui/core/Badge';
+import { Badge, Grid, Button } from '@material-ui/core';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
-
+import FirstPage from "../../imageAssets/FirstPage.jpg";
 
 const useStyles = makeStyles((theme) => createStyles({
   root: {
@@ -23,33 +23,46 @@ const useStyles = makeStyles((theme) => createStyles({
   toolbar: {
     minHeight: 128,
     alignItems: 'flexstart',
+  },
+  AppBar: {
+    minHeight: 128,
+    alignItems: 'flexstart',
     paddingTop: theme.spacing(1),
     paddingBottom: theme.spacing(2),
   },
   title: {
-    marginLeft: theme.spacing(45), //needs to be centered dynamically
+    width: '100%',
+    textAlign: 'center',
+    display: 'none',
+    [theme.breakpoints.up('sm')]: {
+      display: 'block',
+    },
+  },
+  miniText: {
+    marginLeft: theme.spacing(2),
+    width: '100%',
+    textAlign: 'justified',
     display: 'none',
     [theme.breakpoints.up('sm')]: {
       display: 'block',
     },
   },
 
-  
-/*unused classes
-  inputRoot: {
-    color: 'inherit',
-  },
-  inputInput: {
-    padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
-    transition: theme.transitions.create('width'),
-    width: '100%',
-    [theme.breakpoints.up('md')]: {
-      width: '20ch',
+  /*unused classes
+    inputRoot: {
+      color: 'inherit',
     },
-  },
-   */
+    inputInput: {
+      padding: theme.spacing(1, 1, 1, 0),
+      // vertical padding + font size from searchIcon
+      paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
+      transition: theme.transitions.create('width'),
+      width: '100%',
+      [theme.breakpoints.up('md')]: {
+        width: '20ch',
+      },
+    },
+     */
   sectionDesktop: {
     display: 'none',
     [theme.breakpoints.up('md')]: {
@@ -62,7 +75,6 @@ const useStyles = makeStyles((theme) => createStyles({
       display: 'none',
     },
   },
- 
 }));
 
 export default function HeadAppBar() {
@@ -149,10 +161,9 @@ export default function HeadAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar 
+      <AppBar position="static" color='primary' className={classes.AppBar}>
+        <Toolbar
           className={classes.toolbar}
-          color='primary'
         >
           <IconButton
             edge="start"
@@ -165,7 +176,7 @@ export default function HeadAppBar() {
           <Typography className={classes.title} variant="h3" noWrap>
             Lucas Asher
           </Typography>
-          <div className={classes.root} />
+
           <div className={classes.sectionDesktop}>
             <IconButton aria-label="show 17 new notifications" color="inherit">
               <Badge badgeContent={17} color="secondary">
@@ -183,6 +194,7 @@ export default function HeadAppBar() {
               <AccountCircle />
             </IconButton>
           </div>
+
           <div className={classes.sectionMobile}>
             <IconButton
               aria-label="show more"
@@ -194,6 +206,34 @@ export default function HeadAppBar() {
             </IconButton>
           </div>
         </Toolbar>
+
+        <div className={classes.root}>
+
+          <Grid container spacing={2}>
+            <Grid container md={4}>
+              <Grid item>
+                <Typography className={classes.miniText} variant="p">
+                  There are many variations of passages of Lorem Ipsum available
+                </Typography>
+              </Grid>
+              <Grid item>
+                <Typography className={classes.miniText} variant="h4">
+                  High Converting Landing Page Lorem Ipsum
+                </Typography>
+              </Grid>
+              <Grid item>
+                <Button variant="contained">Default</Button>
+              </Grid>
+            </Grid>
+
+            <Grid container md={8} spacing={2}>
+              <Grid item>
+                <img alt='Carousel' src={FirstPage} width='50%'></img>
+              </Grid>
+            </Grid>
+          </Grid>
+
+        </div>
       </AppBar>
       {renderMobileMenu}
       {renderMenu}
