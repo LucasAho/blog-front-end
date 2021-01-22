@@ -4,6 +4,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Header from './components/Header/Header.component';
 import ProjectBar from './components/SectionB/sectionB.component';
+import BlogBar from './components/Blog/Blog.component';
 import { ThemeProvider } from '@material-ui/core/styles';
 import theme from './components/Theme/theme.component';
 
@@ -12,6 +13,7 @@ ReactDOM.render(
     <ThemeProvider theme={theme}>
       <Header />
       <ProjectBar />
+      <BlogBar />
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')

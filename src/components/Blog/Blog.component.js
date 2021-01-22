@@ -8,8 +8,11 @@ const useStyles = makeStyles((theme) => createStyles({
     root: {
         flexGrow: 1,
     },
-    cardRoot: {
-        maxWidth: 345
+    cardMain: {
+        maxWidth: 640
+    },
+    cardSmall: {
+        maxWidth: 360,
     },
     cardStack: {
         paddingTop: "1rem",
@@ -53,19 +56,19 @@ const useStyles = makeStyles((theme) => createStyles({
     },
 }));
 
-export default function ProjectBar() {
+export default function BlogBar() {
     const classes = useStyles();
 
     return (
         <div className={classes.root}>
-            <AppBar position="static" color="secondary">
+            <AppBar position="static" color="primary">
                 <div className={classes.divA}>
                     <Typography className={classes.title} variant="h3" noWrap>
-                        Projects
+                        Blog
                     </Typography>
                 </div>
                 <div className={classes.root}>
-                    <Grid container md={6} justify="center"> {/*needs to be centered*/}
+                    <Grid container md={6}> {/*needs to be centered*/}
                         <Grid item>
                             <Typography className={classes.miniText} variant="p">
                                 There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in form. Lorem ipsum dolor sit amet, cons ectetuer adipsicing elit.
@@ -73,23 +76,52 @@ export default function ProjectBar() {
                         </Grid>
                     </Grid>
 
-                    <Grid container md={9} className={classes.cardStack}>
-                        <Grid container md={3}>
+                    <Grid container md={12} className={classes.cardStack}>
+                        <Grid container md={6}>
                             <Grid item>
-                                <Card className={classes.cardRoot} variant="outlined">
+                                <Card className={classes.cardMain} variant="outlined">
                                     <CardActionArea>
                                         <CardMedia
                                             className={classes.media}
                                             image={placeholder}
-                                            title="Contemplative Reptile"
+                                            title="Against the Grain"
                                         />
                                         <CardContent>
+                                            <Typography color="textSecondary" gutterBottom>
+                                                January 20th, 2020
+                                            </Typography>
                                             <Typography gutterBottom variant="h5" component="h2">
-                                                Title
+                                                Going against the grain, AngelPad kills its demo
                                             </Typography>
                                             <Typography variant="body2" color="textSecondary" component="p">
-                                                Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                                                across all continents except Antarctica
+                                                Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit sed diam nonummy nibh euismod tincidunt.
+                                                Lorem ipsum dolor sit amet, cons ectetuer adipsicing elit, sed diam nonummy nibh euismod tincidunt.
+                                                There are many variations of passsages of Lorem Ipsum abailable, but the majority have suffered alteration in form.
+                                            </Typography>
+                                        </CardContent>
+                                    </CardActionArea>
+                                    <CardActions>
+                                        <Button size="small" color="primary">
+                                            Read Full
+                                        </Button>
+                                    </CardActions>
+                                </Card>
+                            </Grid>
+                        </Grid>
+                        <Grid container md={6} direction="column">
+                            <Grid item>
+                                <Card className={classes.cardSmall} variant="outlined">
+                                    <CardActionArea>
+                                        <CardContent>
+                                            <Typography color="textSecondary" gutterBottom>
+                                                January 19th, 2020
+                                            </Typography>
+                                            <Typography gutterBottom variant="h5" component="h2">
+                                                News Title of Lorem Ipsum
+                                            </Typography>
+                                            <Typography variant="body2" color="textSecondary" component="p">
+                                                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in form. 
+                                                Lorem upsum dolor sit amet, cons ectetuer adipiscing elit sed diam nonummy nibh euismod tincidunt.
                                             </Typography>
                                         </CardContent>
                                     </CardActionArea>
@@ -100,77 +132,20 @@ export default function ProjectBar() {
                                     </CardActions>
                                 </Card>
                             </Grid>
-                        </Grid>
-                        <Grid container md={3}>
+
                             <Grid item>
-                                <Card className={classes.cardRoot} variant="outlined">
+                                <Card className={classes.cardSmall} variant="outlined">
                                     <CardActionArea>
-                                        <CardMedia
-                                            className={classes.media}
-                                            image={placeholder}
-                                            title="Contemplative Reptile"
-                                        />
                                         <CardContent>
+                                        <Typography color="textSecondary" gutterBottom>
+                                                January 18th, 2020
+                                            </Typography>
                                             <Typography gutterBottom variant="h5" component="h2">
-                                                Title
+                                                Lorem Ipsum Title of News
                                             </Typography>
                                             <Typography variant="body2" color="textSecondary" component="p">
-                                                Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                                                across all continents except Antarctica
-                                            </Typography>
-                                        </CardContent>
-                                    </CardActionArea>
-                                    <CardActions>
-                                        <Button size="small" color="primary">
-                                            Learn More
-                                        </Button>
-                                    </CardActions>
-                                </Card>
-                            </Grid>
-                        </Grid>
-                        <Grid container md={3}>
-                            <Grid item>
-                                <Card className={classes.cardRoot} variant="outlined">
-                                    <CardActionArea>
-                                        <CardMedia
-                                            className={classes.media}
-                                            image={placeholder}
-                                            title="Contemplative Reptile"
-                                        />
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h5" component="h2">
-                                                Title
-                                            </Typography>
-                                            <Typography variant="body2" color="textSecondary" component="p">
-                                                Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                                                across all continents except Antarctica
-                                            </Typography>
-                                        </CardContent>
-                                    </CardActionArea>
-                                    <CardActions>
-                                        <Button size="small" color="primary">
-                                            Learn More
-                                        </Button>
-                                    </CardActions>
-                                </Card>
-                            </Grid>
-                        </Grid>
-                        <Grid container md={3}>
-                            <Grid item>
-                                <Card className={classes.cardRoot} variant="outlined">
-                                    <CardActionArea>
-                                        <CardMedia
-                                            className={classes.media}
-                                            image={placeholder}
-                                            title="Contemplative Reptile"
-                                        />
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h5" component="h2">
-                                                Title
-                                            </Typography>
-                                            <Typography variant="body2" color="textSecondary" component="p">
-                                                Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                                                across all continents except Antarctica
+                                                Lorem upsum dolor sit amet, cons ectetuer adipiscing elit sed diam nonummy nibh euismod tincidunt.
+                                                Lorem upsum dolor sit amet, cons ectetuer adipiscing elit sed diam nonummy nibh euismod tincidunt.
                                             </Typography>
                                         </CardContent>
                                     </CardActionArea>
