@@ -115,11 +115,6 @@ export default function ProjectBar() {
                                             </Typography>
                                         </CardContent>
                                     </CardActionArea>
-                                    <CardActions>
-                                        <Button size="small" color="primary">
-                                            Learn More
-                                        </Button>
-                                    </CardActions>
                                 </Card>
                             </Grid>
                         </Grid>
@@ -142,11 +137,6 @@ export default function ProjectBar() {
                                             </Typography>
                                         </CardContent>
                                     </CardActionArea>
-                                    <CardActions>
-                                        <Button size="small" color="primary">
-                                            Learn More
-                                        </Button>
-                                    </CardActions>
                                 </Card>
                             </Grid>
                         </Grid>
@@ -169,15 +159,13 @@ export default function ProjectBar() {
                                         </Typography>
                                     </CardContent>
                                 </CardActionArea>
-                                <CardActions>
-                                    <Button size="small" color="primary">
-                                        Learn More
-                                    </Button>
-                                </CardActions>
                             </Card>
                         </Grid>
                     </Grid>
                 </Grid>
+                <Button size="small" color="dark">
+                    Learn More
+                </Button>
             </AppBar>
         </div>
     )
