@@ -12,41 +12,60 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import { Badge, Grid, Button } from '@material-ui/core';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 import FirstPage from "../../imageAssets/FirstPage.jpg";
+import placeholder from "../../imageAssets/placeholder.png";
 
 const useStyles = makeStyles((theme) => createStyles({
   root: {
     flexGrow: 1,
   },
   menuButton: {
-    marginRight: theme.spacing(2),
+    //marginRight: theme.spacing(2),
   },
   toolbar: {
     minHeight: 128,
     alignItems: 'flexstart',
+    paddingBottom: '1rem'
   },
   AppBar: {
     minHeight: 128,
     alignItems: 'flexstart',
-    paddingTop: theme.spacing(1),
-    paddingBottom: theme.spacing(2),
+    paddingTop: '1rem',
+    paddingBottom: '3rem',
+    paddingLeft: '2rem',
+    paddingRight: '2rem'
+  },
+  grid: {
+    marginLeft: '2rem',
+    marginRight: '2rem',
+    paddingLeft: '2rem',
+    paddingBottom: '2rem'
   },
   title: {
     width: '100%',
     textAlign: 'center',
     display: 'none',
+    marginBottom: '1rem',
     [theme.breakpoints.up('sm')]: {
       display: 'block',
     },
   },
   miniText: {
     marginLeft: theme.spacing(2),
-    width: '100%',
     textAlign: 'justified',
-    display: 'none',
-    [theme.breakpoints.up('sm')]: {
-      display: 'block',
-    },
+    width: '75%'
   },
+  miniTextA: {
+    marginBottom: '1rem',
+    textAlign: 'left',
+    marginLeft: '1rem',
+  },
+  headerButton: {
+    marginLeft: '1rem',
+  },
+  imageGrid: {
+    marginLeft: '1rem'
+  },
+
 
   /*unused classes
     inputRoot: {
@@ -162,9 +181,7 @@ export default function HeadAppBar() {
   return (
     <div className={classes.root}>
       <AppBar position="static" color='primary' className={classes.AppBar}>
-        <Toolbar
-          className={classes.toolbar}
-        >
+        <Toolbar className={classes.toolbar}>
           <IconButton
             edge="start"
             className={classes.menuButton}
@@ -176,24 +193,6 @@ export default function HeadAppBar() {
           <Typography className={classes.title} variant="h3" noWrap>
             Lucas Asher
           </Typography>
-
-          <div className={classes.sectionDesktop}>
-            <IconButton aria-label="show 17 new notifications" color="inherit">
-              <Badge badgeContent={17} color="secondary">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
-            <IconButton
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              <AccountCircle />
-            </IconButton>
-          </div>
 
           <div className={classes.sectionMobile}>
             <IconButton
@@ -207,33 +206,30 @@ export default function HeadAppBar() {
           </div>
         </Toolbar>
 
-        <div className={classes.root}>
-
-          <Grid container spacing={2}>
-            <Grid container md={4}>
-              <Grid item>
-                <Typography className={classes.miniText} variant="p">
-                  There are many variations of passages of Lorem Ipsum available
-                </Typography>
-              </Grid>
-              <Grid item>
-                <Typography className={classes.miniText} variant="h4">
-                  High Converting Landing Page Lorem Ipsum
-                </Typography>
-              </Grid>
-              <Grid item>
-                <Button variant="contained">Default</Button>
-              </Grid>
+        <Grid container spacing={2} className={classes.grid}>
+          <Grid container md={4} spacing={4}>
+            <Grid item>
+              <Typography className={classes.miniTextA} variant="p">
+                There are many variations of passages of Lorem Ipsum available
+              </Typography>
             </Grid>
-
-            <Grid container md={8} spacing={2}>
-              <Grid item>
-                <img alt='Carousel' src={FirstPage} width='50%'></img>
-              </Grid>
+            <Grid item>
+              <Typography className={classes.miniText} variant="h4">
+                High Converting Landing Page Lorem Ipsum
+              </Typography>
+            </Grid>
+            <Grid item>
+              <Button className={classes.headerButton} variant="contained">Button</Button>
             </Grid>
           </Grid>
 
-        </div>
+          <Grid container md={6} spacing={2} className={classes.imageGrid}>
+            <Grid item>
+              <img alt='Carousel' src={placeholder} width='125%'></img>
+            </Grid>
+          </Grid>
+        </Grid>
+
       </AppBar>
       {renderMobileMenu}
       {renderMenu}

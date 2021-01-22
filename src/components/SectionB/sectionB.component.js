@@ -8,8 +8,13 @@ const useStyles = makeStyles((theme) => createStyles({
     root: {
         flexGrow: 1,
     },
+    appBar: {
+        paddingBottom: '2rem'
+    },
     cardRoot: {
-        maxWidth: 345
+        maxWidth: 250,
+        marginLeft: "1rem",
+        marginRight: "1rem",
     },
     cardStack: {
         paddingTop: "1rem",
@@ -17,12 +22,11 @@ const useStyles = makeStyles((theme) => createStyles({
         marginRight: "3rem",
     },
     title: {
-        width: '100%',
+        //width: '100%',
         textAlign: 'center',
-        display: 'none',
-        [theme.breakpoints.up('sm')]: {
-            display: 'block',
-        },
+    },
+    subTextDiv: {
+        //textAlign: 'center'\
     },
     miniText: {
         textAlign: 'center',
@@ -34,10 +38,10 @@ const useStyles = makeStyles((theme) => createStyles({
     media: {
         height: 280,
     },
-    divA: {
-        minHeight: 128,
+    titleDiv: {
         alignItems: 'flexstart',
-        paddingTop: theme.spacing(1),
+        paddingTop: '1.5rem',
+        paddingBottom: '1.5rem',
     },
     sectionDesktop: {
         display: 'none',
@@ -58,132 +62,122 @@ export default function ProjectBar() {
 
     return (
         <div className={classes.root}>
-            <AppBar position="static" color="secondary">
-                <div className={classes.divA}>
+            <AppBar className={classes.appBar} position="static" color="secondary">
+                <div className={classes.titleDiv}>
                     <Typography className={classes.title} variant="h3" noWrap>
                         Projects
                     </Typography>
                 </div>
-                <div className={classes.root}>
-                    <Grid container md={6} justify="center"> {/*needs to be centered*/}
-                        <Grid item>
-                            <Typography className={classes.miniText} variant="p">
-                                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in form. Lorem ipsum dolor sit amet, cons ectetuer adipsicing elit.
-                            </Typography>
-                        </Grid>
-                    </Grid>
-
-                    <Grid container md={9} className={classes.cardStack}>
-                        <Grid container md={3}>
-                            <Grid item>
-                                <Card className={classes.cardRoot} variant="outlined">
-                                    <CardActionArea>
-                                        <CardMedia
-                                            className={classes.media}
-                                            image={placeholder}
-                                            title="Contemplative Reptile"
-                                        />
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h5" component="h2">
-                                                Title
-                                            </Typography>
-                                            <Typography variant="body2" color="textSecondary" component="p">
-                                                Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                                                across all continents except Antarctica
-                                            </Typography>
-                                        </CardContent>
-                                    </CardActionArea>
-                                    <CardActions>
-                                        <Button size="small" color="primary">
-                                            Learn More
-                                        </Button>
-                                    </CardActions>
-                                </Card>
-                            </Grid>
-                        </Grid>
-                        <Grid container md={3}>
-                            <Grid item>
-                                <Card className={classes.cardRoot} variant="outlined">
-                                    <CardActionArea>
-                                        <CardMedia
-                                            className={classes.media}
-                                            image={placeholder}
-                                            title="Contemplative Reptile"
-                                        />
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h5" component="h2">
-                                                Title
-                                            </Typography>
-                                            <Typography variant="body2" color="textSecondary" component="p">
-                                                Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                                                across all continents except Antarctica
-                                            </Typography>
-                                        </CardContent>
-                                    </CardActionArea>
-                                    <CardActions>
-                                        <Button size="small" color="primary">
-                                            Learn More
-                                        </Button>
-                                    </CardActions>
-                                </Card>
-                            </Grid>
-                        </Grid>
-                        <Grid container md={3}>
-                            <Grid item>
-                                <Card className={classes.cardRoot} variant="outlined">
-                                    <CardActionArea>
-                                        <CardMedia
-                                            className={classes.media}
-                                            image={placeholder}
-                                            title="Contemplative Reptile"
-                                        />
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h5" component="h2">
-                                                Title
-                                            </Typography>
-                                            <Typography variant="body2" color="textSecondary" component="p">
-                                                Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                                                across all continents except Antarctica
-                                            </Typography>
-                                        </CardContent>
-                                    </CardActionArea>
-                                    <CardActions>
-                                        <Button size="small" color="primary">
-                                            Learn More
-                                        </Button>
-                                    </CardActions>
-                                </Card>
-                            </Grid>
-                        </Grid>
-                        <Grid container md={3}>
-                            <Grid item>
-                                <Card className={classes.cardRoot} variant="outlined">
-                                    <CardActionArea>
-                                        <CardMedia
-                                            className={classes.media}
-                                            image={placeholder}
-                                            title="Contemplative Reptile"
-                                        />
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h5" component="h2">
-                                                Title
-                                            </Typography>
-                                            <Typography variant="body2" color="textSecondary" component="p">
-                                                Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                                                across all continents except Antarctica
-                                            </Typography>
-                                        </CardContent>
-                                    </CardActionArea>
-                                    <CardActions>
-                                        <Button size="small" color="primary">
-                                            Learn More
-                                        </Button>
-                                    </CardActions>
-                                </Card>
-                            </Grid>
-                        </Grid>
-                    </Grid>
+                <div className={classes.subTextDiv}>
+                    <Typography className={classes.miniText} variant="p">
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in form. Lorem ipsum dolor sit amet, cons ectetuer adipsicing elit.
+                    </Typography>
                 </div>
+                <Grid container md={12} alignItem='center' className={classes.cardStack}>
+                    <Grid container md={3} spacing={2} >
+                        <Grid item>
+                            <Card className={classes.cardRoot} variant="outlined">
+                                <CardActionArea>
+                                    <CardMedia
+                                        className={classes.media}
+                                        image={placeholder}
+                                        title="Contemplative Reptile"
+                                    />
+                                    <CardContent>
+                                        <Typography gutterBottom variant="h5" component="h2">
+                                            Title
+                                        </Typography>
+                                        <Typography variant="body2" color="textSecondary" component="p">
+                                            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                                            across all continents except Antarctica
+                                        </Typography>
+                                    </CardContent>
+                                </CardActionArea>
+                                </Card>
+                        </Grid>
+                    </Grid>
+                        <Grid container md={3}>
+                            <Grid item>
+                                <Card className={classes.cardRoot} variant="outlined">
+                                    <CardActionArea>
+                                        <CardMedia
+                                            className={classes.media}
+                                            image={placeholder}
+                                            title="Contemplative Reptile"
+                                        />
+                                        <CardContent>
+                                            <Typography gutterBottom variant="h5" component="h2">
+                                                Title
+                                            </Typography>
+                                            <Typography variant="body2" color="textSecondary" component="p">
+                                                Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                                                across all continents except Antarctica
+                                            </Typography>
+                                        </CardContent>
+                                    </CardActionArea>
+                                    <CardActions>
+                                        <Button size="small" color="primary">
+                                            Learn More
+                                        </Button>
+                                    </CardActions>
+                                </Card>
+                            </Grid>
+                        </Grid>
+                        <Grid container md={3}>
+                            <Grid item>
+                                <Card className={classes.cardRoot} variant="outlined">
+                                    <CardActionArea>
+                                        <CardMedia
+                                            className={classes.media}
+                                            image={placeholder}
+                                            title="Contemplative Reptile"
+                                        />
+                                        <CardContent>
+                                            <Typography gutterBottom variant="h5" color="textSecondary" component="h2">
+                                                Title
+                                            </Typography>
+                                            <Typography variant="body2" color="textSecondary" component="p">
+                                                Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                                                across all continents except Antarctica
+                                            </Typography>
+                                        </CardContent>
+                                    </CardActionArea>
+                                    <CardActions>
+                                        <Button size="small" color="primary">
+                                            Learn More
+                                        </Button>
+                                    </CardActions>
+                                </Card>
+                            </Grid>
+                        </Grid>
+                        <Grid container md={3}>
+                            <Grid item>
+                                <Card className={classes.cardRoot} variant="outlined">
+                                    <CardActionArea>
+                                        <CardMedia
+                                            className={classes.media}
+                                            image={placeholder}
+                                            title="Contemplative Reptile"
+                                        />
+                                    <CardContent>
+                                        <Typography gutterBottom variant="h5" component="h2">
+                                            Title
+                                        </Typography>
+                                        <Typography variant="body2" color="textSecondary" component="p">
+                                            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                                            across all continents except Antarctica
+                                        </Typography>
+                                    </CardContent>
+                                </CardActionArea>
+                                <CardActions>
+                                    <Button size="small" color="primary">
+                                        Learn More
+                                    </Button>
+                                </CardActions>
+                            </Card>
+                        </Grid>
+                    </Grid>
+                </Grid>
             </AppBar>
         </div>
     )
