@@ -1,12 +1,10 @@
 import React from 'react';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 import { Card, Grid, CardActionArea, Button, Typography, CardMedia, CardContent, Box } from '@material-ui/core';
-import AppBar from '@material-ui/core/AppBar';
 import stockSki from "../../imageAssets/stockSki.jpg";
 import stockDnD from "../../imageAssets/stockDnD.jpg";
 import stockFriends from "../../imageAssets/stockFriends.jpg";
 import stockTrivia from "../../imageAssets/stockTrivia.jpg";
-import placeholder from "../../imageAssets/placeholder.png";
 
 const useStyles = makeStyles((theme) => createStyles({
     root: {

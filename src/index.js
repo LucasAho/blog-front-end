@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Header from './components/Header/Header.component';
-import ProjectBar from './components/SectionB/sectionB.component';
+import ProjectBar from './components/Showcase/Showcase.component';
 import BlogBar from './components/Blog/Blog.component';
+import PodcastBar from './components/Podcast/Podcast.component';
 import { ThemeProvider } from '@material-ui/core/styles';
 import theme from './components/Theme/theme.component';
 
@@ -14,6 +15,7 @@ ReactDOM.render(
       <Header />
       <ProjectBar />
       <BlogBar />
+      <PodcastBar />
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
