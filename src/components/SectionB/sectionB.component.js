@@ -1,7 +1,11 @@
 import React from 'react';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
-import { Card, Grid, CardActionArea, Button, Typography, CardMedia, CardContent, CardActions } from '@material-ui/core';
+import { Card, Grid, CardActionArea, Button, Typography, CardMedia, CardContent, Box } from '@material-ui/core';
 import AppBar from '@material-ui/core/AppBar';
+import stockSki from "../../imageAssets/stockSki.jpg";
+import stockDnD from "../../imageAssets/stockDnD.jpg";
+import stockFriends from "../../imageAssets/stockFriends.jpg";
+import stockTrivia from "../../imageAssets/stockTrivia.jpg";
 import placeholder from "../../imageAssets/placeholder.png";
 
 const useStyles = makeStyles((theme) => createStyles({
@@ -27,16 +31,15 @@ const useStyles = makeStyles((theme) => createStyles({
     },
     subTextDiv: {
         //textAlign: 'center'\
+        marginBottom: '2rem'
     },
     miniText: {
         textAlign: 'center',
-        display: 'none',
-        [theme.breakpoints.up('sm')]: {
-            display: 'block',
-        },
+        display: 'block',
     },
     media: {
-        height: 280,
+        height: 300,
+        width: 200
     },
     titleDiv: {
         alignItems: 'flexstart',
@@ -44,10 +47,7 @@ const useStyles = makeStyles((theme) => createStyles({
         paddingBottom: '1.5rem',
     },
     sectionDesktop: {
-        display: 'none',
-        [theme.breakpoints.up('md')]: {
-            display: 'flex',
-        },
+        display: 'flex',
     },
     sectionMobile: {
         display: 'flex',
@@ -59,114 +59,133 @@ const useStyles = makeStyles((theme) => createStyles({
 
 export default function ProjectBar() {
     const classes = useStyles();
-
     return (
         <div className={classes.root}>
-            <AppBar className={classes.appBar} position="static" color="secondary">
+            <Box className={classes.appBar} color="secondary">
                 <div className={classes.titleDiv}>
                     <Typography className={classes.title} variant="h3" noWrap>
-                        Projects
+                        Portfolio
                     </Typography>
                 </div>
-                <div className={classes.subTextDiv}>
+                <Box className={classes.subTextDiv} mx='auto'>
                     <Typography className={classes.miniText} variant="p">
-                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in form. Lorem ipsum dolor sit amet, cons ectetuer adipsicing elit.
+                        Showcase of skills developed in full stack web development. The following apps display knowledge of MVC systems, CRUD operations with RESTful APIs, account encryption and security, and skill in visual design.
                     </Typography>
-                </div>
-                <Grid container md={12} alignItem='center' className={classes.cardStack}>
-                    <Grid container md={3} spacing={2} >
-                        <Grid item>
-                            <Card className={classes.cardRoot} variant="outlined">
-                                <CardActionArea>
-                                    <CardMedia
-                                        className={classes.media}
-                                        image={placeholder}
-                                        title="Contemplative Reptile"
-                                    />
-                                    <CardContent>
-                                        <Typography gutterBottom variant="h5" component="h2">
-                                            Title
-                                        </Typography>
-                                        <Typography variant="body2" color="textSecondary" component="p">
-                                            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                                            across all continents except Antarctica
-                                        </Typography>
-                                    </CardContent>
-                                </CardActionArea>
-                                </Card>
-                        </Grid>
+                </Box>
+                <Grid container md={12} spacing={1} flexWrap="nowrap" justify='center' className={classes.cardStack}>
+                    <Grid item align='center'>
+                        <Card className={classes.cardRoot} variant="outlined">
+                            <CardActionArea onClick={event => {
+                                window.location.href = "https://lucasaho.github.io/Project1/";
+                            }}>
+                                <CardMedia
+                                    className={classes.media}
+                                    image={stockSki}
+                                    title="Ski & Board Report"
+                                />
+                                {/*<CardContent>
+                                    <Typography gutterBottom variant="h5" color="darkSecondary" component="h2">
+                                        Ski & Board Report
+                                    </Typography>
+                                    <Typography variant="body2" color="darkSecondary" component="p">
+                                        The Colorado Ski & Board Report© will provide a longtime Colorado resident, a recent transplant, or and adventurous visitor the opportunity for quick, informative, and detailed information based on their favorite Colorado Ski Resort.
+                                    </Typography>
+                                </CardContent> 
+                                    <Button size="small" color="dark" onClick={event => {
+                                window.location.href = "https://github.com/LucasAho/Project1";
+                            }}>
+                                See the Code
+                            </Button>
+                            */}
+                            </CardActionArea>
+
+                        </Card>
                     </Grid>
-                        <Grid container md={3}>
-                            <Grid item>
-                                <Card className={classes.cardRoot} variant="outlined">
-                                    <CardActionArea>
-                                        <CardMedia
-                                            className={classes.media}
-                                            image={placeholder}
-                                            title="Contemplative Reptile"
-                                        />
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h5" component="h2">
-                                                Title
-                                            </Typography>
-                                            <Typography variant="body2" color="textSecondary" component="p">
-                                                Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                                                across all continents except Antarctica
-                                            </Typography>
-                                        </CardContent>
-                                    </CardActionArea>
-                                </Card>
-                            </Grid>
-                        </Grid>
-                        <Grid container md={3}>
-                            <Grid item>
-                                <Card className={classes.cardRoot} variant="outlined">
-                                    <CardActionArea>
-                                        <CardMedia
-                                            className={classes.media}
-                                            image={placeholder}
-                                            title="Contemplative Reptile"
-                                        />
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h5" color="textSecondary" component="h2">
-                                                Title
-                                            </Typography>
-                                            <Typography variant="body2" color="textSecondary" component="p">
-                                                Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                                                across all continents except Antarctica
-                                            </Typography>
-                                        </CardContent>
-                                    </CardActionArea>
-                                </Card>
-                            </Grid>
-                        </Grid>
-                        <Grid container md={3}>
-                            <Grid item>
-                                <Card className={classes.cardRoot} variant="outlined">
-                                    <CardActionArea>
-                                        <CardMedia
-                                            className={classes.media}
-                                            image={placeholder}
-                                            title="Contemplative Reptile"
-                                        />
-                                    <CardContent>
-                                        <Typography gutterBottom variant="h5" component="h2">
-                                            Title
-                                        </Typography>
-                                        <Typography variant="body2" color="textSecondary" component="p">
-                                            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                                            across all continents except Antarctica
-                                        </Typography>
-                                    </CardContent>
-                                </CardActionArea>
-                            </Card>
-                        </Grid>
+                    <Grid item align='center'>
+                        <Card className={classes.cardRoot} variant="outlined">
+                            <CardActionArea onClick={event => {
+                                window.location.href = "https://hidden-savannah-88913.herokuapp.com/";
+                            }}>
+                                <CardMedia
+                                    className={classes.media}
+                                    image={stockDnD}
+                                    title="DnD Manager"
+                                />
+                                {/*<CardContent>
+                                    <Typography gutterBottom variant="h5" component="h2">
+                                        DnD Tool
+                                    </Typography>
+                                    <Typography variant="body2" color="darkSecondary" component="p">
+                                        One app for all your DnD needs, whether a player or DM
+                                    </Typography>
+                                </CardContent>
+                                <Button size="small" color="dark" onClick={event => {
+                                    window.location.href = "https://github.com/LucasAho/Project-2";
+                                }}>
+                                    Checkout the Code
+                                </Button>
+                        */}
+                            </CardActionArea>
+
+                        </Card>
+                    </Grid>
+                    <Grid item align='center'>
+                        <Card className={classes.cardRoot} variant="outlined">
+                            <CardActionArea onClick={event => {
+                                window.location.href = "https://quiet-gorge-84311.herokuapp.com/";
+                            }}>
+                                <CardMedia
+                                    className={classes.media}
+                                    image={stockFriends}
+                                    title="Friend Finder"
+                                />
+                                {/* <CardContent>
+                                    <Typography gutterBottom variant="h5" color="darkSecondary" component="h2">
+                                        Friend Finder
+                                    </Typography>
+                                    <Typography variant="body2" color="darkSecondary" component="p">
+                                        Take a personality test to see if you're more similar to me, my ex girlfriend, or baby yoda! Yes, we all hope its baby yoda.
+                                    </Typography>
+                                </CardContent>
+                                <Button size="small" color="dark" onClick={event => {
+                                window.location.href = "https://github.com/LucasAho/crispy-guacamole";
+                                }}>
+                                    Checkout the Code
+                                </Button>
+                                */}
+                            </CardActionArea>
+                            
+                        </Card>
+                    </Grid>
+                    <Grid item align='center'>
+                        <Card className={classes.cardRoot} variant="outlined">
+                            <CardActionArea onClick={event => {
+                                window.location.href = "https://lucasaho.github.io/TriviaGame/";
+                            }}>
+                                <CardMedia
+                                    className={classes.media}
+                                    image={stockTrivia}
+                                    title="Animal Trivia"
+                                />
+                                {/*  <CardContent>
+                                    <Typography gutterBottom variant="h5" component="h2">
+                                        Trivia Game
+                                    </Typography>
+                                    <Typography variant="body2" color="textSecondary" component="p">
+                                        A trivia game about animals! Timers n stuff!
+                                    </Typography>
+                                </CardContent>
+                                <Button size="small" color="dark" onClick={event => {
+                                    window.location.href = "https://github.com/LucasAho/TriviaGame";
+                                }}>
+                                    Checkout the Code
+                                </Button> */}
+                            </CardActionArea>
+                            
+                        </Card>
                     </Grid>
                 </Grid>
-                <Button size="small" color="dark">
-                    Learn More
-                </Button>
-            </AppBar>
+            </Box>
         </div>
     )
 }

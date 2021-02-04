@@ -210,12 +210,12 @@ export default function HeadAppBar() {
           <Grid container md={4} spacing={4}>
             <Grid item>
               <Typography className={classes.miniTextA} variant="p">
-                There are many variations of passages of Lorem Ipsum available
+                Author, rock climber, and full stack web developer
               </Typography>
             </Grid>
             <Grid item>
               <Typography className={classes.miniText} variant="h4">
-                High Converting Landing Page Lorem Ipsum
+                Welcome to my page, idk if an about me goes here?
               </Typography>
             </Grid>
             <Grid item>
