@@ -67,7 +67,7 @@ export default function ProjectBar() {
                 </div>
                 <Box className={classes.subTextDiv} mx='auto'>
                     <Typography className={classes.miniText} variant="p">
-                        Showcase of skills developed in full stack web development. The following apps display knowledge of MVC systems, CRUD operations with RESTful APIs, account encryption and security, and skill in visual design.
+                        A showcase of skills cultivated in full stack web development. The following apps display knowledge of MVC systems, CRUD operations with RESTful APIs, account encryption and security, and skill in visual design.
                     </Typography>
                 </Box>
                 <Grid container md={12} spacing={1} flexWrap="nowrap" justify='center' className={classes.cardStack}>
@@ -81,22 +81,21 @@ export default function ProjectBar() {
                                     image={stockSki}
                                     title="Ski & Board Report"
                                 />
-                                {/*<CardContent>
+                                <CardContent>
                                     <Typography gutterBottom variant="h5" color="darkSecondary" component="h2">
                                         Ski & Board Report
                                     </Typography>
                                     <Typography variant="body2" color="darkSecondary" component="p">
-                                        The Colorado Ski & Board Report© will provide a longtime Colorado resident, a recent transplant, or and adventurous visitor the opportunity for quick, informative, and detailed information based on their favorite Colorado Ski Resort.
+                                        Find out the latest information about your favorite Colorado ski resort. 
                                     </Typography>
                                 </CardContent> 
-                                    <Button size="small" color="dark" onClick={event => {
+                                 
+                            </CardActionArea>
+                            <Button size="small" color="dark" onClick={event => {
                                 window.location.href = "https://github.com/LucasAho/Project1";
                             }}>
-                                See the Code
+                                Checkout the Code
                             </Button>
-                            */}
-                            </CardActionArea>
-
                         </Card>
                     </Grid>
                     <Grid item align='center'>
@@ -109,12 +108,12 @@ export default function ProjectBar() {
                                     image={stockDnD}
                                     title="DnD Manager"
                                 />
-                                {/*<CardContent>
+                                <CardContent>
                                     <Typography gutterBottom variant="h5" component="h2">
                                         DnD Tool
                                     </Typography>
                                     <Typography variant="body2" color="darkSecondary" component="p">
-                                        One app for all your DnD needs, whether a player or DM
+                                        New to DnD? Tools, tricks, and data storage for Dungeon Masters and players. 
                                     </Typography>
                                 </CardContent>
                                 <Button size="small" color="dark" onClick={event => {
@@ -122,7 +121,6 @@ export default function ProjectBar() {
                                 }}>
                                     Checkout the Code
                                 </Button>
-                        */}
                             </CardActionArea>
 
                         </Card>
@@ -137,12 +135,12 @@ export default function ProjectBar() {
                                     image={stockFriends}
                                     title="Friend Finder"
                                 />
-                                {/* <CardContent>
+                                <CardContent>
                                     <Typography gutterBottom variant="h5" color="darkSecondary" component="h2">
                                         Friend Finder
                                     </Typography>
                                     <Typography variant="body2" color="darkSecondary" component="p">
-                                        Take a personality test to see if you're more similar to me, my ex girlfriend, or baby yoda! Yes, we all hope its baby yoda.
+                                        Are you similar to me, my ex girlfriend, or Baby Yoda? (Yes, we all hope it's Baby Yoda.)
                                     </Typography>
                                 </CardContent>
                                 <Button size="small" color="dark" onClick={event => {
@@ -150,7 +148,7 @@ export default function ProjectBar() {
                                 }}>
                                     Checkout the Code
                                 </Button>
-                                */}
+                                
                             </CardActionArea>
                             
                         </Card>
@@ -165,19 +163,19 @@ export default function ProjectBar() {
                                     image={stockTrivia}
                                     title="Animal Trivia"
                                 />
-                                {/*  <CardContent>
+                                <CardContent>
                                     <Typography gutterBottom variant="h5" component="h2">
                                         Trivia Game
                                     </Typography>
-                                    <Typography variant="body2" color="textSecondary" component="p">
-                                        A trivia game about animals! Timers n stuff!
+                                    <Typography variant="body2" color="dark" component="p">
+                                        Snow leopards, guinea pigs, octopi...oh my! Think you know animals? Let's find out!
                                     </Typography>
                                 </CardContent>
                                 <Button size="small" color="dark" onClick={event => {
                                     window.location.href = "https://github.com/LucasAho/TriviaGame";
                                 }}>
                                     Checkout the Code
-                                </Button> */}
+                                </Button>
                             </CardActionArea>
                             
                         </Card>
