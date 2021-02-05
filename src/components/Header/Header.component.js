@@ -1,11 +1,12 @@
 import React from 'react';
-import { Grid, AppBar } from '@material-ui/core';
+import { Grid, AppBar, Box } from '@material-ui/core';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 import { RightHeaderPane, LeftHeaderPane, ToolbarPane } from './HeaderPanes.component';
 
 const useStyles = makeStyles((theme) => createStyles({
   root: {
     flexGrow: 1,
+    maxWidth: '960px'
   },
   AppBar: {
     minHeight: 128,
@@ -25,7 +26,7 @@ const useStyles = makeStyles((theme) => createStyles({
 export default function HeadAppBar() {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
+    <Box className={classes.root} mx='auto'>
       <AppBar position="static" color='primary' className={classes.AppBar}>
 
         <ToolbarPane />
@@ -40,6 +41,6 @@ export default function HeadAppBar() {
         </Grid>
 
       </AppBar>
-    </div>
+    </Box>
   );
 }
