@@ -10,9 +10,6 @@ const useStyles = makeStyles((theme) => createStyles({
     root: {
         flexGrow: 1,
     },
-    appBar: {
-        paddingBottom: '2rem'
-    },
     cardRoot: {
         maxWidth: 250,
         marginLeft: "1rem",
@@ -58,8 +55,7 @@ const useStyles = makeStyles((theme) => createStyles({
 export default function ProjectBar() {
     const classes = useStyles();
     return (
-        <div className={classes.root}>
-            <Box className={classes.appBar} color="secondary">
+        <div className={classes.root} color="secondary">
                 <div className={classes.titleDiv}>
                     <Typography className={classes.title} variant="h3" noWrap>
                         Portfolio
@@ -180,7 +176,6 @@ export default function ProjectBar() {
                         </Card>
                     </Grid>
                 </Grid>
-            </Box>
         </div>
     )
 }
