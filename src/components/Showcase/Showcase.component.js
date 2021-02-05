@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => createStyles({
     },
     subTextDiv: {
         //textAlign: 'center'\
-        marginBottom: '2rem'
+        marginBottom: '1.25rem'
     },
     miniText: {
         textAlign: 'center',
@@ -67,10 +67,10 @@ export default function ProjectBar() {
                 </div>
                 <Box className={classes.subTextDiv} mx='auto'>
                     <Typography className={classes.miniText} variant="p">
-                        A showcase of skills cultivated in full stack web development. The following apps display knowledge of MVC systems, CRUD operations with RESTful APIs, account encryption and security, and skill in visual design.
+                        A showcase of skills cultivated in full stack web development. The following apps display knowledge of creating MERN stacks, building out RESTful APIs, utilizating encryption libraries, and competency in visual design.
                     </Typography>
                 </Box>
-                <Grid container md={12} spacing={1} flexWrap="nowrap" justify='center' className={classes.cardStack}>
+                <Grid container md={12} spacing={2} flexWrap="nowrap" justify='center' className={classes.cardStack}>
                     <Grid item align='center'>
                         <Card className={classes.cardRoot} variant="outlined">
                             <CardActionArea onClick={event => {
@@ -88,8 +88,7 @@ export default function ProjectBar() {
                                     <Typography variant="body2" color="darkSecondary" component="p">
                                         Find out the latest information about your favorite Colorado ski resort. 
                                     </Typography>
-                                </CardContent> 
-                                 
+                                </CardContent>  
                             </CardActionArea>
                             <Button size="small" color="dark" onClick={event => {
                                 window.location.href = "https://github.com/LucasAho/Project1";
@@ -140,7 +139,7 @@ export default function ProjectBar() {
                                         Friend Finder
                                     </Typography>
                                     <Typography variant="body2" color="darkSecondary" component="p">
-                                        Are you similar to me, my ex girlfriend, or Baby Yoda? (Yes, we all hope it's Baby Yoda.)
+                                        Are you more similar to me, my ex girlfriend, or Baby Yoda? (Yes, we all hope it's Baby Yoda.)
                                     </Typography>
                                 </CardContent>
                                 <Button size="small" color="dark" onClick={event => {
