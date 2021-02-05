@@ -1,6 +1,5 @@
 import React from 'react';
-import { Grid, Button, IconButton, Typography, AppBar, Toolbar, Paper } from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
+import { Grid, AppBar } from '@material-ui/core';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 import { RightHeaderPane, LeftHeaderPane, ToolbarPane } from './HeaderPanes.component';
 
