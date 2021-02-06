@@ -47,14 +47,14 @@ export function HeadPane() {
 }
 
 /*
-https://lucasaho.github.io/Project1/
-https://github.com/LucasAho/Project1
-https://hidden-savannah-88913.herokuapp.com/
-https://github.com/LucasAho/Project-2
-https://quiet-gorge-84311.herokuapp.com/
-https://github.com/LucasAho/crispy-guacamole
-https://lucasaho.github.io/TriviaGame/
-https://github.com/LucasAho/TriviaGame
+
+
+/
+
+
+
+
+
 */
 
 export function CardPane(props) {
@@ -62,7 +62,7 @@ export function CardPane(props) {
     return (
         <Card className={classes.cardRoot} color="darkPrimary" variant="outlined">
             <CardActionArea onClick={event => {
-                window.location.href = "https://lucasaho.github.io/Project1/";
+                window.location.href = props.link;
             }}>
                 <CardMedia
                     className={classes.media}
@@ -79,7 +79,7 @@ export function CardPane(props) {
                 </CardContent>
             </CardActionArea>
             <Button size="small" color="dark" onClick={event => {
-                window.location.href = "https://github.com/LucasAho/Project1";
+                window.location.href = props.buttonLink;
             }}>
                 Checkout the Code
         </Button>
