@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
-import { Box, Card, Grid, CardActionArea, Button, Typography, CardMedia, CardContent, CardActions } from '@material-ui/core';
+import { Box, Grid } from '@material-ui/core';
 import { HeadPane, RecentPane, SubPane } from './BlogPanes.component'
 import AppBar from '@material-ui/core/AppBar';
 import stockMental from "../../imageAssets/stockMental.png";
