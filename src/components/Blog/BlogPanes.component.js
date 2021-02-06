@@ -71,7 +71,7 @@ export function RecentPane(props) {
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <Button size="small" color="primary" onClick={event => {
+                <Button size="small" color="dark" onClick={event => {
                     window.location.href = props.link;
                 }}>
                     Checkout the webpage!
@@ -89,13 +89,13 @@ export function SubPane(props) {
                 window.location.href = props.link;
             }}>
                 <CardContent>
-                    <Typography color="textSecondary" gutterBottom>
+                    <Typography gutterBottom>
                         {props.date}
                     </Typography>
                     <Typography gutterBottom variant="h5" component="h2">
                         {props.title}
                     </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
+                    <Typography variant="body2" component="p">
                         {props.descript}
                     </Typography>
                 </CardContent>

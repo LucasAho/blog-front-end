@@ -29,7 +29,7 @@ export default function BlogBar() {
                             title={"Growing Up Suicidal"}
                             date={"Febuary 6th, 2021"}
                             img={stockMental}
-                            descript={"Life’s a bitch, and then you die. Or at least that is what I used to believe, and for over half of my life, I eagerly awaited the second half of that statement."}
+                            descript={"Life’s a bitch, and then you die. Or at least that is what I used to believe, and for over half of my life, I eagerly awaited the second half of that statement[...]"}
                             link={"https://docs.google.com/document/d/1xS5POXXUN3dl46hdM00BYt13qZrB8165iTpyMfwHhE8/edit?usp=sharing"}
                         />
                     </Grid>

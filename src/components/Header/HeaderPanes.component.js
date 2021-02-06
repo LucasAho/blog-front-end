@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Button, Typography, Paper, Toolbar, IconButton } from '@material-ui/core';
+import { Button, Typography, Paper, Toolbar, IconButton } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import placeholder from "../../imageAssets/placeholder.png";
 import { makeStyles, createStyles } from '@material-ui/core/styles';
@@ -67,7 +67,7 @@ export function LeftHeaderPane() {
 }
 
 export function RightHeaderPane() {
-    const classes = useStyles();
+    //const classes = useStyles();
     return (
         //This component will work to cycle image carousel
         <Paper>
