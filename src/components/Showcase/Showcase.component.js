@@ -10,7 +10,9 @@ import stockTrivia from "../../imageAssets/stockTrivia.jpg";
 const useStyles = makeStyles((theme) => createStyles({
     root: {
         flexGrow: 1,
-        maxWidth: '960px'
+        maxWidth: '960px',
+        backgroundColor: "#FFFFFF",
+        paddingBottom: '1rem'
     },
     cardStack: {
         paddingTop: "1rem",
@@ -20,7 +22,7 @@ const useStyles = makeStyles((theme) => createStyles({
 export default function ProjectBar() {
     const classes = useStyles();
     return (
-        <Box className={classes.root} mx='auto' color="secondary">
+        <Box className={classes.root} mx='auto'>
             <HeadPane />
             <Grid container flexWrap="nowrap" className={classes.cardStack}>
                 <Grid item md>

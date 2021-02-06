@@ -13,9 +13,7 @@ const useStyles = makeStyles((theme) => createStyles({
     },
     blogSubText: {
         paddingBottom: '1rem',
-    },
-    miniText: {
-        textAlign: 'center',
+        textAlign: 'center'
     },
     cardSmall: {
         maxWidth: 360,
@@ -23,8 +21,6 @@ const useStyles = makeStyles((theme) => createStyles({
     },
     cardMain: {
         maxWidth: 400,
-        marginRight: '1rem',
-        marginLeft: '1rem'
     },
     media: {
         height: 280,
@@ -42,45 +38,46 @@ export function HeadPane() {
             </div>
 
             <div className={classes.blogSubText}>
-                <Typography className={classes.miniText} variant="p">
-                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in form. Lorem ipsum dolor sit amet, cons ectetuer adipsicing elit.
+                <Typography variant="p">
+                    A mixture of politically minded essays, stories of my personal walk through life, and creative works associated with my world building and novel series
                 </Typography>
             </div>
         </Box>
     );
 }
 
-export function RecentPane() {
+export function RecentPane(props) {
     const classes = useStyles();
     return (
         <Card className={classes.cardMain} variant="outlined">
-            <CardActionArea>
+            <CardActionArea onClick={event => {
+                window.location.href = props.link;
+            }}>
                 <CardMedia
                     className={classes.media}
-                    image={""}
-                    title="Against the Grain"
+                    image={props.img}
+                    title={props.title}
                 />
                 <CardContent>
                     <Typography color="textSecondary" gutterBottom>
-                        January 20th, 2020
+                        {props.date}
                     </Typography>
                     <Typography gutterBottom variant="h5" component="h2">
-                        Going against the grain, AngelPad kills its demo
+                        {props.title}
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit sed diam nonummy nibh euismod tincidunt.
-                        Lorem ipsum dolor sit amet, cons ectetuer adipsicing elit, sed diam nonummy nibh euismod tincidunt.
-                        There are many variations of passsages of Lorem Ipsum abailable, but the majority have suffered alteration in form.
+                        {props.descript}
                     </Typography>
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <Button size="small" color="primary">
-                    Read Full
+                <Button size="small" color="primary" onClick={event => {
+                    window.location.href = props.link;
+                }}>
+                    Checkout the webpage!
                 </Button>
             </CardActions>
         </Card>
-
     );
 }
 
@@ -88,17 +85,18 @@ export function SubPane(props) {
     const classes = useStyles();
     return (
         <Card className={classes.cardSmall} variant="outlined">
-            <CardActionArea>
+            <CardActionArea onClick={event => {
+                window.location.href = props.link;
+            }}>
                 <CardContent>
                     <Typography color="textSecondary" gutterBottom>
-                        January 19th, 2020
+                        {props.date}
                     </Typography>
                     <Typography gutterBottom variant="h5" component="h2">
-                        News Title of Lorem Ipsum
+                        {props.title}
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in form.
-                        Lorem upsum dolor sit amet, cons ectetuer adipiscing elit sed diam nonummy nibh euismod tincidunt.
+                        {props.descript}
                     </Typography>
                 </CardContent>
             </CardActionArea>

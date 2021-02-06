@@ -7,7 +7,8 @@ const useStyles = makeStyles((theme) => createStyles({
   root: {
     flexGrow: 1,
     maxWidth: '960px',
-    padding: '1rem'
+    padding: '1rem',
+    backgroundColor: "#180D35"
   },
   AppBar: {
     minHeight: 128,
@@ -28,7 +29,7 @@ export default function HeadAppBar() {
   const classes = useStyles();
   return (
     <Box className={classes.root} mx='auto'>
-      <AppBar position="static" color='primary' className={classes.AppBar}>
+      <AppBar position="static" className={classes.AppBar}>
 
         <ToolbarPane />
 
