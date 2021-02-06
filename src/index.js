@@ -6,6 +6,7 @@ import Header from './components/Header/Header.component';
 import ProjectBar from './components/Showcase/Showcase.component';
 import BlogBar from './components/Blog/Blog.component';
 import PodcastBar from './components/Podcast/Podcast.component';
+import Footer from './components/Footer/Footer.component';
 import { ThemeProvider } from '@material-ui/core/styles';
 import theme from './components/Theme/theme.component';
 
@@ -16,6 +17,7 @@ ReactDOM.render(
       <ProjectBar />
       <BlogBar />
       <PodcastBar />
+      <Footer />
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')

@@ -46,17 +46,6 @@ export function HeadPane() {
     );
 }
 
-/*
-
-
-/
-
-
-
-
-
-*/
-
 export function CardPane(props) {
     const classes = useStyles();
     return (

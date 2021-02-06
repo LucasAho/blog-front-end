@@ -39,7 +39,7 @@ export default function BlogBar() {
                             date={"May 31st, 2020"}
                             descript={"Throughout the course of human history, we have seen countless societies and governing bodies rise and fall. The basis for creating society is apparent, it has led to improvements and progress in humanity’s quality of life, ability to cooperate with and understand[...]"}
                             link={"https://docs.google.com/document/d/16CwWnn1NO6EJwLmm3hDceWlAEo3Em9_TYTrQiskYn7E/edit?usp=sharing"}
-                            />
+                        />
                         <SubPane 
                             title={"Accountability and Representation"}
                             date={"June 1st, 2020"}
