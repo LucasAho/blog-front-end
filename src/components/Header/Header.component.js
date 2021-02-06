@@ -6,7 +6,8 @@ import { RightHeaderPane, LeftHeaderPane, ToolbarPane } from './HeaderPanes.comp
 const useStyles = makeStyles((theme) => createStyles({
   root: {
     flexGrow: 1,
-    maxWidth: '960px'
+    maxWidth: '960px',
+    padding: '1rem'
   },
   AppBar: {
     minHeight: 128,
@@ -39,7 +40,6 @@ export default function HeadAppBar() {
             <RightHeaderPane />
           </Grid>
         </Grid>
-
       </AppBar>
     </Box>
   );

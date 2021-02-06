@@ -11,7 +11,8 @@ const useStyles = makeStyles((theme) => createStyles({
     cardRoot: {
         maxWidth: 200,
         padding: '1rem',
-        paddingTop: '0'
+        paddingTop: '0',
+        //backgroundColor: "#193469"
     },
     title: {
         textAlign: 'center',
@@ -22,7 +23,7 @@ const useStyles = makeStyles((theme) => createStyles({
     },
     media: {
         height: 300,
-        width: 250
+        width: '95%'
     },
 }));
 
@@ -35,7 +36,7 @@ export function HeadPane() {
                     Portfolio
                 </Typography>
             </div>
-                
+
             <div className={classes.subTextDiv}>
                 <Typography variant="p">
                     A showcase of skills cultivated in full stack web development. The following apps display knowledge of creating MERN stacks, building out RESTful APIs, utilizating encryption libraries, and competency in visual design.
@@ -59,29 +60,29 @@ https://github.com/LucasAho/TriviaGame
 export function CardPane(props) {
     const classes = useStyles();
     return (
-        <Card className={classes.cardRoot} variant="outlined">
-        <CardActionArea onClick={event => {
-            window.location.href = "https://lucasaho.github.io/Project1/";
-        }}>
-            <CardMedia
-                className={classes.media}
-                image={props.img}
-                title={props.title}
-            />
-            <CardContent>
-                <Typography gutterBottom variant="h5" color="darkSecondary" component="h2">
-                    {props.title}
-                </Typography>
-                <Typography variant="body2" color="darkSecondary" component="p">
-                    {props.descript}
-                </Typography>
-            </CardContent>  
-        </CardActionArea>
-        <Button size="small" color="dark" onClick={event => {
-            window.location.href = "https://github.com/LucasAho/Project1";
-        }}>
-            Checkout the Code
+        <Card className={classes.cardRoot} color="darkPrimary" variant="outlined">
+            <CardActionArea onClick={event => {
+                window.location.href = "https://lucasaho.github.io/Project1/";
+            }}>
+                <CardMedia
+                    className={classes.media}
+                    image={props.img}
+                    title={props.title}
+                />
+                <CardContent>
+                    <Typography gutterBottom variant="h5" color="darkSecondary" component="h2">
+                        {props.title}
+                    </Typography>
+                    <Typography variant="body2" color="darkSecondary" component="p">
+                        {props.descript}
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
+            <Button size="small" color="dark" onClick={event => {
+                window.location.href = "https://github.com/LucasAho/Project1";
+            }}>
+                Checkout the Code
         </Button>
-    </Card>
+        </Card>
     );
 }
