@@ -1,8 +1,11 @@
-import React from 'react';
-import { Button, Typography, Paper, Toolbar, IconButton } from '@material-ui/core';
+import React, { useState } from 'react';
+import { Button, Typography, Box, Toolbar, IconButton } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
-import placeholder from "../../imageAssets/placeholder.png";
+import { SliderData } from "./SliderData.component";
 import { makeStyles, createStyles } from '@material-ui/core/styles';
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import transitions from '@material-ui/core/styles/transitions';
 
 
 const useStyles = makeStyles((theme) => createStyles({
@@ -29,7 +32,18 @@ const useStyles = makeStyles((theme) => createStyles({
     },
     leftDiv: {
         padding: '1rem'
-    }
+    },
+    slider: {
+        position: "relative",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
+    },
+    media: {
+        width: '100%',
+        borderRadius: 10
+        
+    },
 }));
 
 export function ToolbarPane() {
@@ -66,12 +80,37 @@ export function LeftHeaderPane() {
     );
 }
 
-export function RightHeaderPane() {
-    //const classes = useStyles();
+export const ImageSlider = ({ slides }) => {
+    const classes = useStyles();
+    const [current, setCurrent] = useState(0);
+
+    const length = slides.length;
+
+   
+    const nextSlide = () => {
+        setCurrent(current === length - 1 ? 0 : current + 1);
+    }
+    setTimeout(
+        () => nextSlide(), 
+        5000
+    );
+    if(!Array.isArray(slides) || slides.length <=0) {
+        return null;
+    }
+
     return (
         //This component will work to cycle image carousel
-        <Paper>
-            <img alt='Carousel' src={placeholder}></img>
-        </Paper>
+        <Box className={classes.slider}>
+            {SliderData.map((slide, index) => {
+                return (
+                    <div className={index === current ? 'slide active' : 'slide'} key={index}>
+                        {index === current && (
+                            
+                            <img alt='Carousel' className={classes.media} src={slide.image}/>
+                        )}
+                    </div>
+                );
+            })}
+        </Box>
     );
 }

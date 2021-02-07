@@ -1,7 +1,8 @@
 import React from 'react';
 import { Grid, AppBar, Box } from '@material-ui/core';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
-import { RightHeaderPane, LeftHeaderPane, ToolbarPane } from './HeaderPanes.component';
+import { LeftHeaderPane, ToolbarPane, ImageSlider } from './HeaderPanes.component';
+import { SliderData } from './SliderData.component';
 
 const useStyles = makeStyles((theme) => createStyles({
   root: {
@@ -11,7 +12,7 @@ const useStyles = makeStyles((theme) => createStyles({
     backgroundColor: "#180D35"
   },
   AppBar: {
-    minHeight: 128,
+    minHeight: 675,
     alignItems: 'flexstart',
     paddingTop: '1rem',
     paddingBottom: '3rem',
@@ -27,6 +28,7 @@ const useStyles = makeStyles((theme) => createStyles({
 
 export default function HeadAppBar() {
   const classes = useStyles();
+  
   return (
     <Box className={classes.root} mx='auto'>
       <AppBar position="static" className={classes.AppBar}>
@@ -38,7 +40,7 @@ export default function HeadAppBar() {
             <LeftHeaderPane />
           </Grid>
           <Grid className={classes.grid} item md>
-            <RightHeaderPane />
+            <ImageSlider slides={SliderData}/>
           </Grid>
         </Grid>
       </AppBar>
