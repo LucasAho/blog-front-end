@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => createStyles({
 
 export default function ProjectBar() {
     const classes = useStyles();
+
     return (
         <Box className={classes.root} mx='auto'>
             <HeadPane />

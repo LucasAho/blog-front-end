@@ -17,8 +17,9 @@ const useStyles = makeStyles((theme) => createStyles({
 
 export default function PodcastBar() {
     const classes = useStyles();
+    
     return (
-        <Box className={classes.root} mx='auto'>
+        <Box className={classes.root}  mx='auto'>
             <HeadPane />
             <Grid container>
                 <Grid item md={7}>

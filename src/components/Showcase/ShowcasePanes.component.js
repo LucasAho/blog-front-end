@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => createStyles({
     },
     media: {
         height: 300,
-        width: '95%'
+        width: '100%'
     },
 }));
 

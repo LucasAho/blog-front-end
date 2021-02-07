@@ -19,8 +19,9 @@ const useStyles = makeStyles((theme) => createStyles({
 
 export default function BlogBar() {
     const classes = useStyles();
+    
     return (
-        <Box className={classes.root} mx='auto'>
+        <Box className={classes.root} mx='auto' >
             <AppBar position="static">
                 <HeadPane/>
                 <Grid container align='center' className={classes.cardStack}> 
