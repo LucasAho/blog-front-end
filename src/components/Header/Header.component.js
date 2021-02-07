@@ -21,13 +21,15 @@ const useStyles = makeStyles((theme) => createStyles({
   },
 }));
 
-export default function HeadAppBar() {
+export default function HeadAppBar(props) {
   const classes = useStyles();
-  
+  const handleClick = props.handleClickCB;
   return (
     <Box className={classes.root} mx='auto'>
       <AppBar position="static" className={classes.AppBar}>
-      ` <MenuButton/>
+        <MenuButton 
+        handleClickCB={handleClick}
+        />
         <BioHeadPane />
         <Grid container>
           <Grid className={classes.grid} item md={5}>

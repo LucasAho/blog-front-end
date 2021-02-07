@@ -16,20 +16,15 @@ const useStyles = makeStyles((theme) => createStyles({
 
 const MenuButton = (props) => {
     const classes = useStyles();
-    const ref = React.createRef();
     const [anchorEl, setAnchorEl] = React.useState(null);
 
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
-        ref.current.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-        });
     };
 
     const handleClose = (ref) => {
         setAnchorEl(null);
-        ref.current.scrollIntoView({ behavior: 'smooth' });
+        props.handleClickCB(ref);
     };
 
     return (
@@ -41,13 +36,26 @@ const MenuButton = (props) => {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
             >
-                <MenuItem onClick={() => {
-                    handleClose();
-                    handleClick();
-                }}>Bio</MenuItem>
-                <MenuItem onClick={handleClose}>Portfolio</MenuItem>
-                <MenuItem onClick={handleClose}>Blog</MenuItem>
-                <MenuItem onClick={handleClose}>Podcast</MenuItem>
+                <MenuItem onClick={()=>{
+                    handleClose('bioRef');
+                }}>
+                    Bio
+                </MenuItem>
+                <MenuItem onClick={()=>{
+                    handleClose('portRef');
+                }}>
+                    Portfolio
+                </MenuItem>
+                <MenuItem onClick={()=>{
+                    handleClose('blogRef');
+                }}>
+                    Blog
+                </MenuItem>
+                <MenuItem onClick={()=>{
+                    handleClose('podRef');
+                }}>
+                    Podcast
+                </MenuItem>
             </Menu>
             <IconButton
                 edge="start"

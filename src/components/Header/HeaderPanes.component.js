@@ -27,7 +27,8 @@ const useStyles = makeStyles((theme) => createStyles({
         position: "relative",
         display: "flex",
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+        paddingTop: '2rem'
     },
     media: {
         width: '100%',
@@ -46,7 +47,7 @@ export function BioHeadPane() {
                     </Typography>
                 </Grid>
                 <Grid item md={12}>
-                    <Typography align="center" variant="button">
+                    <Typography align="center" variant="h6">
                         Author, rock climber, and full stack web developer
                     </Typography>
                 </Grid>

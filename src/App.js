@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useRef } from 'react';
+import Header from './components/Header/Header.component';
+import ProjectBar from './components/Showcase/Showcase.component';
+import BlogBar from './components/Blog/Blog.component';
+import PodcastBar from './components/Podcast/Podcast.component';
+import Footer from './components/Footer/Footer.component';
+import { Box } from '@material-ui/core';
+
+
 
 function App() {
+  const bioRef = useRef();
+  const blogRef = useRef();
+  const podRef = useRef();
+  const portRef = useRef();
+
+  const handleClick = (ref) => {
+    // ref.current.scrollIntoView({
+    //     behavior: 'smooth',
+    //     block: 'start',
+    // });
+    console.log(ref);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Box>
+          <Header ref={bioRef} handleClickCB={handleClick}/>
+          
+          
+          
+          <ProjectBar ref={portRef}/>
+          <BlogBar ref={blogRef}/>
+          <PodcastBar ref={podRef}/>
+          <Footer />
+      </Box>
   );
 }
 
