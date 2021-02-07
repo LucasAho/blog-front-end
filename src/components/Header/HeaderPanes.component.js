@@ -86,12 +86,8 @@ export const ImageSlider = ({ slides }) => {
 
     const length = slides.length;
 
-   
-    const nextSlide = () => {
-        setCurrent(current === length - 1 ? 0 : current + 1);
-    }
     setTimeout(
-        () => nextSlide(), 
+        () => setCurrent(current === length - 1 ? 0 : current + 1), 
         5000
     );
     if(!Array.isArray(slides) || slides.length <=0) {

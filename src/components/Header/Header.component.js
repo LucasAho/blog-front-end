@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => createStyles({
     backgroundColor: "#180D35"
   },
   AppBar: {
-    minHeight: 675,
+    minHeight: 750,
     alignItems: 'flexstart',
     paddingTop: '1rem',
     paddingBottom: '3rem',
