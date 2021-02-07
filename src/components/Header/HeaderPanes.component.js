@@ -3,10 +3,6 @@ import { Button, Typography, Box, Toolbar, IconButton } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu';
 import { SliderData } from "./SliderData.component";
 import { makeStyles, createStyles } from '@material-ui/core/styles';
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-import transitions from '@material-ui/core/styles/transitions';
-
 
 const useStyles = makeStyles((theme) => createStyles({
     mainText: {
@@ -99,7 +95,6 @@ export const ImageSlider = ({ slides }) => {
     }
 
     return (
-        //This component will work to cycle image carousel
         <Box className={classes.slider}>
             {SliderData.map((slide, index) => {
                 return (
