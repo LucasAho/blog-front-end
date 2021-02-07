@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, AppBar, Box, Typography } from '@material-ui/core';
+import { Grid, AppBar, Box } from '@material-ui/core';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 import { BioTextPane, BioHeadPane, ImageSlider } from './HeaderPanes.component';
 import { SliderData } from './SliderData.component';
@@ -13,11 +13,8 @@ const useStyles = makeStyles((theme) => createStyles({
     backgroundColor: "#180D35"
   },
   AppBar: {
-    minHeight: 128,
-    alignItems: 'flexstart',
-    paddingBottom: '2rem',
-    paddingLeft: '2rem',
-    paddingRight: '2rem'
+    paddingTop: '0rem',
+    padding: '2rem',
   },
   grid: {
     paddingBottom: '2rem'
@@ -29,11 +26,10 @@ export default function HeadAppBar() {
   
   return (
     <Box className={classes.root} mx='auto'>
-      
       <AppBar position="static" className={classes.AppBar}>
       ` <MenuButton/>
         <BioHeadPane />
-        <Grid container >
+        <Grid container>
           <Grid className={classes.grid} item md={5}>
             <BioTextPane />
           </Grid>
