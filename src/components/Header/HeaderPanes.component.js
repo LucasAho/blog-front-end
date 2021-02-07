@@ -9,11 +9,8 @@ import transitions from '@material-ui/core/styles/transitions';
 
 
 const useStyles = makeStyles((theme) => createStyles({
-    subText: {
-        textAlign: 'justified',
-    },
     mainText: {
-        textAlign: 'left',
+        paddingTop: '1.5rem',
     },
     headerButton: {
         marginTop: '1rem',
@@ -69,13 +66,20 @@ export function LeftHeaderPane() {
     const classes = useStyles();
     return (
         <div className={classes.leftDiv}>
-            <Typography className={classes.subText} variant="p">
+            <Typography align="center" variant="subtitle2">
                 Author, rock climber, and full stack web developer
             </Typography>
-            <Typography className={classes.mainText} variant="h4">
-                Welcome to my page, idk if an about me goes here?
+            <Typography className={classes.mainText} align="left" variant="body1">
+                Hello! I am a full stack web developer located out of Colorado. I work my absolute hardest towards every goal, both in my personal and professional life.
+                <br/>
+                When I'm not honing my programming abilities, I love rock climbing and hiking. 
+                I have also spent the last two years worldbuilding: writing three constructed languages, drafting my manuscript, and sculpting a universe. 
+                <br/>
+                This webpage navigates from my programming experience to my creative endeavors, and will be regularly updated as I expand my horizons.
             </Typography>
+            {/* useless button?
             <Button className={classes.headerButton} variant="contained">Button</Button>
+            */}
         </div>
     );
 }

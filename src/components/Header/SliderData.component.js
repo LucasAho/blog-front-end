@@ -29,13 +29,7 @@ export const SliderData = [
         image: scenic2
     },
     {
-        image: climbHang
-    },
-    {
         image: scenic3
-    },
-    {
-        image: climbShoe
     },
     
 ];

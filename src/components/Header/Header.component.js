@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => createStyles({
     backgroundColor: "#180D35"
   },
   AppBar: {
-    minHeight: 750,
+    minHeight: 128,
     alignItems: 'flexstart',
     paddingTop: '1rem',
     paddingBottom: '3rem',
@@ -20,8 +20,8 @@ const useStyles = makeStyles((theme) => createStyles({
     paddingRight: '2rem'
   },
   grid: {
-    marginLeft: '1rem',
-    marginRight: '1rem',
+    //marginLeft: '1rem',
+    //marginRight: '1rem',
     paddingBottom: '2rem'
   },
 }));
