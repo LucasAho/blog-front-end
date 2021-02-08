@@ -2,6 +2,7 @@ import React, { Component, useState, useRef } from 'react';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 import { Button, Typography, Box, Toolbar, IconButton, Menu, MenuItem } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
+import Scroll from 'react-scroll'
 
 
 const useStyles = makeStyles((theme) => createStyles({
@@ -14,7 +15,9 @@ const useStyles = makeStyles((theme) => createStyles({
     }
 }));
 
-const MenuButton = (props) => {
+const MenuButton = () => {
+    var scroller = Scroll.scroller;
+   
     const classes = useStyles();
     const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -22,9 +25,16 @@ const MenuButton = (props) => {
         setAnchorEl(event.currentTarget);
     };
 
-    const handleClose = (ref) => {
+    const handleClose = (id) => {
         setAnchorEl(null);
-        props.handleClickCB(ref);
+        scroller.scrollTo(id, {
+            duration: 100,
+            //delay: 100,
+            smooth: true,
+            //containerId: 'blog',
+            //offset: 50, // Scrolls to element + 50 pixels down the page
+        });
+    
     };
 
     return (
@@ -37,25 +47,64 @@ const MenuButton = (props) => {
                 onClose={handleClose}
             >
                 <MenuItem onClick={()=>{
-                    handleClose('bioRef');
+                    handleClose('home')
                 }}>
-                    Bio
+                    Home
                 </MenuItem>
                 <MenuItem onClick={()=>{
-                    handleClose('portRef');
+                    handleClose('portfolio')
                 }}>
                     Portfolio
                 </MenuItem>
                 <MenuItem onClick={()=>{
-                    handleClose('blogRef');
+                    handleClose('blog')
                 }}>
                     Blog
                 </MenuItem>
                 <MenuItem onClick={()=>{
-                    handleClose('podRef');
+                    handleClose('podcast')
                 }}>
                     Podcast
                 </MenuItem>
+                {/*
+                
+                </MenuItem>
+                <ScrollLink
+                    to="home"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    className='some-class'
+                    activeClass='some-active-class'
+                >
+                    <MenuItem onClick={handleClose}>
+                        Portfolio
+                    </MenuItem>
+                </ScrollLink>
+                <ScrollLink
+                    to="home"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    className='some-class'
+                    activeClass='some-active-class'
+                >
+                    <MenuItem onClick={handleClose}>
+                        Blog
+                    </MenuItem>
+                </ScrollLink>
+                <ScrollLink
+                    to="home"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    
+                >
+                    <MenuItem onClick={handleClose}>
+                        Podcast
+                    </MenuItem>
+                </ScrollLink>
+    */}
             </Menu>
             <IconButton
                 edge="start"

@@ -5,33 +5,25 @@ import BlogBar from './components/Blog/Blog.component';
 import PodcastBar from './components/Podcast/Podcast.component';
 import Footer from './components/Footer/Footer.component';
 import { Box } from '@material-ui/core';
-
+import { Element } from 'react-scroll';
 
 
 function App() {
-  const bioRef = useRef();
-  const blogRef = useRef();
-  const podRef = useRef();
-  const portRef = useRef();
-
-  const handleClick = (ref) => {
-    blogRef.current.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-    });
-  };
-
   return (
       <Box>
-        <div ref={bioRef}>
-          <Header handleClickCB={handleClick}/>
-        </div>
-          <ProjectBar ref={portRef}/>
-          <div ref={blogRef}>
+        <Element id='home' name='home'>
+          <Header />
+        </Element>
+        <Element id='portfolio' name='portfolio'>
+          <ProjectBar />
+        </Element>
+        <Element id='blog' name='blog'>
           <BlogBar />
-          </div>
-          <PodcastBar ref={podRef}/>
-          <Footer />
+        </Element>
+        <Element id='podcast' name='podcast'>
+          <PodcastBar />
+        </Element>   
+        <Footer />
       </Box>
   );
 }
