@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import Header from './components/Header/Header.component';
 import ProjectBar from './components/Showcase/Showcase.component';
 import BlogBar from './components/Blog/Blog.component';

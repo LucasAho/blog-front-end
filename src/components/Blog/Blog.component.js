@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 import { Box, Grid } from '@material-ui/core';
-import { HeadPane, RecentPane, SubPane } from './BlogPanes.component'
+import { HeadPane, RecentPostPane, SubPane } from './BlogPanes.component'
 import AppBar from '@material-ui/core/AppBar';
 import stockMental from "../../imageAssets/stockMental.png";
 
@@ -14,6 +14,9 @@ const useStyles = makeStyles((theme) => createStyles({
     },
     cardStack: {
         paddingTop: "1rem",
+    },
+    bigCard: {
+        paddingBottom: "1rem",
     },  
 }));
 
@@ -25,8 +28,8 @@ export default function BlogBar() {
             <AppBar position="static">
                 <HeadPane/>
                 <Grid container align='center' className={classes.cardStack}> 
-                    <Grid item md>
-                        <RecentPane 
+                    <Grid item md className={classes.bigCard}>
+                        <RecentPostPane 
                             title={"Growing Up Suicidal"}
                             date={"Febuary 6th, 2021"}
                             img={stockMental}

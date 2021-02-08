@@ -4,49 +4,53 @@ import { makeStyles, createStyles } from '@material-ui/core/styles';
 
 
 const useStyles = makeStyles((theme) => createStyles({
-    title: {
+    //HeadPane Classes
+    headText: {
         textAlign: 'center',
     },
-    divA: {
+    headerDiv: {
         paddingTop: '1rem',
         paddingBottom: '1rem',
     },
-    blogSubText: {
+    subDiv: {
         paddingBottom: '1rem',
-        textAlign: 'center'
     },
-    cardSmall: {
-        maxWidth: 360,
-        marginBottom: "2rem",
-    },
+    
+    //RecentCard Classes
     cardMain: {
         maxWidth: 400,
     },
     media: {
         height: 280,
     },
+
+    //SmallCard Classes
+    cardSmall: {
+        maxWidth: 360,
+        marginBottom: "2rem",
+    },
 }));
 
 export function HeadPane() {
     const classes = useStyles();
     return (
-        <Box >
-            <div className={classes.divA}>
-                <Typography className={classes.title} variant="h3" noWrap>
+        <div>
+            <div className={classes.headerDiv}>
+                <Typography className={classes.headText} variant="h3" noWrap>
                     Blog
                 </Typography>
             </div>
 
-            <div className={classes.blogSubText}>
+            <div align="center" className={classes.subDiv}>
                 <Typography variant="p">
                     A mixture of politically minded essays, stories of my personal walk through life, and creative works associated with my world building and novel series
                 </Typography>
             </div>
-        </Box>
+        </div>
     );
 }
 
-export function RecentPane(props) {
+export function RecentPostPane(props) {
     const classes = useStyles();
     return (
         <Card className={classes.cardMain} variant="outlined">

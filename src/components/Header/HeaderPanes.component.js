@@ -10,9 +10,6 @@ const useStyles = makeStyles((theme) => createStyles({
         alignItems: 'flexstart',
         paddingBottom: '1rem',
     },
-    bioText: {
-        paddingTop: '1rem',
-    },
     headText: {
         paddingBottom: '1rem'
     },
@@ -20,6 +17,9 @@ const useStyles = makeStyles((theme) => createStyles({
     //Text Classes
     bioDiv: {
         padding: '1rem'
+    },
+    bioText: {
+        paddingTop: '1rem',
     },
     
     //ImageSlider Classes

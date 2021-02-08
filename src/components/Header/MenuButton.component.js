@@ -1,6 +1,6 @@
-import React, { Component, useState, useRef } from 'react';
+import React from 'react';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
-import { Button, Typography, Box, Toolbar, IconButton, Menu, MenuItem } from '@material-ui/core';
+import { IconButton, Menu, MenuItem } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import Scroll from 'react-scroll'
 
@@ -11,13 +11,18 @@ const useStyles = makeStyles((theme) => createStyles({
     },
     menu: {
         opacity: '90%',
-        backgroundColor: ""
-    }
+        //color: "#000000",
+    },
+    // menuItem: {
+    //     opacity: '90%',
+    //     backgroundColor: "#000000",
+    //     color: "#FFFFFF"
+    // }
 }));
 
 const MenuButton = () => {
-    var scroller = Scroll.scroller;
-   
+    const scroller = Scroll.scroller;
+
     const classes = useStyles();
     const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -28,13 +33,9 @@ const MenuButton = () => {
     const handleClose = (id) => {
         setAnchorEl(null);
         scroller.scrollTo(id, {
-            duration: 100,
-            //delay: 100,
+            duration: 500,
             smooth: true,
-            //containerId: 'blog',
-            //offset: 50, // Scrolls to element + 50 pixels down the page
         });
-    
     };
 
     return (
@@ -46,65 +47,26 @@ const MenuButton = () => {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
             >
-                <MenuItem onClick={()=>{
+                <MenuItem className={classes.menuItem} onClick={()=>{
                     handleClose('home')
                 }}>
                     Home
                 </MenuItem>
-                <MenuItem onClick={()=>{
+                <MenuItem className={classes.menuItem} onClick={()=>{
                     handleClose('portfolio')
                 }}>
                     Portfolio
                 </MenuItem>
-                <MenuItem onClick={()=>{
+                <MenuItem className={classes.menuItem} onClick={()=>{
                     handleClose('blog')
                 }}>
                     Blog
                 </MenuItem>
-                <MenuItem onClick={()=>{
+                <MenuItem className={classes.menuItem} onClick={()=>{
                     handleClose('podcast')
                 }}>
                     Podcast
                 </MenuItem>
-                {/*
-                
-                </MenuItem>
-                <ScrollLink
-                    to="home"
-                    spy={true}
-                    smooth={true}
-                    duration={500}
-                    className='some-class'
-                    activeClass='some-active-class'
-                >
-                    <MenuItem onClick={handleClose}>
-                        Portfolio
-                    </MenuItem>
-                </ScrollLink>
-                <ScrollLink
-                    to="home"
-                    spy={true}
-                    smooth={true}
-                    duration={500}
-                    className='some-class'
-                    activeClass='some-active-class'
-                >
-                    <MenuItem onClick={handleClose}>
-                        Blog
-                    </MenuItem>
-                </ScrollLink>
-                <ScrollLink
-                    to="home"
-                    spy={true}
-                    smooth={true}
-                    duration={500}
-                    
-                >
-                    <MenuItem onClick={handleClose}>
-                        Podcast
-                    </MenuItem>
-                </ScrollLink>
-    */}
             </Menu>
             <IconButton
                 edge="start"

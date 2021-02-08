@@ -12,7 +12,6 @@ const useStyles = makeStyles((theme) => createStyles({
         maxWidth: 200,
         padding: '1rem',
         paddingTop: '0',
-        //backgroundColor: "#193469"
     },
     title: {
         textAlign: 'center',
