@@ -15,21 +15,21 @@ function App() {
   const portRef = useRef();
 
   const handleClick = (ref) => {
-    // ref.current.scrollIntoView({
-    //     behavior: 'smooth',
-    //     block: 'start',
-    // });
-    console.log(ref);
+    blogRef.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+    });
   };
 
   return (
       <Box>
-          <Header ref={bioRef} handleClickCB={handleClick}/>
-          
-          
-          
+        <div ref={bioRef}>
+          <Header handleClickCB={handleClick}/>
+        </div>
           <ProjectBar ref={portRef}/>
-          <BlogBar ref={blogRef}/>
+          <div ref={blogRef}>
+          <BlogBar />
+          </div>
           <PodcastBar ref={podRef}/>
           <Footer />
       </Box>
