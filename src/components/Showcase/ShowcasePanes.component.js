@@ -27,8 +27,12 @@ const useStyles = makeStyles((theme) => createStyles({
         [theme.breakpoints.down('sm')]: {
             marginTop: '1rem',
             backgroundColor: "#193469",
-            color: "#EBE5F9"
+            color: "#EBE5F9",
+            maxWidth: 250
         },
+        [theme.breakpoints.down('xs')]: {
+            maxWidth: 300
+        }
     },
     button: {
         [theme.breakpoints.down('sm')]: {

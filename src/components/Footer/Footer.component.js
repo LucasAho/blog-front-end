@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
-import { Box, Button, Grid, Tabs, Tab, Typography } from '@material-ui/core';
+import { Box, Button, Grid, Tabs, Typography } from '@material-ui/core';
 import { } from './FooterPanes.component'
 
 const useStyles = makeStyles((theme) => createStyles({

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Card, CardActions, CardMedia, CardContent, CardActionArea, Button } from '@material-ui/core';
+import { Typography, Card, CardActions, CardMedia, CardContent, CardActionArea, Button } from '@material-ui/core';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 
 
