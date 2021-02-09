@@ -7,7 +7,11 @@ import Scroll from 'react-scroll'
 
 const useStyles = makeStyles((theme) => createStyles({
     menuButton: {
-        //marginRight: theme.spacing(2),
+        padding: '1rem',
+        position: 'fixed',
+        top: '0',
+        transition: 'top 0.6s',
+        color: "#4E7BD5"
     },
     menu: {
         opacity: '90%',
@@ -71,7 +75,7 @@ const MenuButton = () => {
             <IconButton
                 edge="start"
                 className={classes.menuButton}
-                color="inherit"
+                size='medium'
                 aria-label="open drawer"
                 onClick={handleClick}
             >

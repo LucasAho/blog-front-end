@@ -8,11 +8,7 @@ const useStyles = makeStyles((theme) => createStyles({
         paddingTop: '1rem',
         paddingBottom: '1rem',
     },
-    cardRoot: {
-        maxWidth: 200,
-        padding: '1rem',
-        paddingTop: '0',
-    },
+
     title: {
         textAlign: 'center',
     },
@@ -23,6 +19,11 @@ const useStyles = makeStyles((theme) => createStyles({
     media: {
         height: 300,
         width: '100%'
+    },
+    cardRoot: {
+        maxWidth: 200,
+        padding: '1rem',
+        paddingTop: '0',
     },
 }));
 

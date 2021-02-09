@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
-import { Box, Paper, Grid, Tabs, Tab, Typography } from '@material-ui/core';
+import { Box, Button, Grid, Tabs, Tab, Typography } from '@material-ui/core';
 import { } from './FooterPanes.component'
 
 const useStyles = makeStyles((theme) => createStyles({
@@ -33,9 +33,9 @@ export default function BlogBar() {
                     textColor="primary"
                     centered
                 >
-                    <Tab label="Contact Me" />
-                    <Tab label="Item Two" />
-                    <Tab label="Item Three" />
+                    <Button label="Contact Me" />
+                    <Button label="Contact Me" />
+                    <Button label="Contact Me" />
                 </Tabs>
                 <Grid container>
                     <Grid item>

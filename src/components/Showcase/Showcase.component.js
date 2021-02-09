@@ -9,12 +9,17 @@ import stockTrivia from "../../imageAssets/stockTrivia.jpg";
 
 const useStyles = makeStyles((theme) => createStyles({
     root: {
-        flexGrow: 1,
-        maxWidth: '960px',
+        //flexGrow: 1,
+        [theme.breakpoints.up('lg')]: {
+            maxWidth: '1280px'
+        },
         backgroundColor: "#FFFFFF",
         paddingBottom: '1rem'
     },
     cardStack: {
+        [theme.breakpoints.up('md')]: {
+            maxWidth: '1080px'
+        },
         paddingTop: "1rem",
     },
 }));
@@ -23,45 +28,45 @@ export default function ProjectBar() {
     const classes = useStyles();
 
     return (
-        <Box className={classes.root} mx='auto'>
+        <Box className={classes.root} align='center' px='1rem' mx='auto'>
             <HeadPane />
-            <Grid container flexWrap="nowrap" className={classes.cardStack}>
-                <Grid item md>
-                    <CardPane 
+            <Grid container align='center' className={classes.cardStack}>
+                <Grid item md >
+                    <CardPane
                         img={stockSki}
                         title={"Ski & Board Report"}
                         descript={"Find out the latest information about your favorite Colorado ski resort."}
                         link={"https://lucasaho.github.io/Project1/"}
                         buttonLink={"https://github.com/LucasAho/Project1"}
-                    />   
+                    />
                 </Grid>
                 <Grid item md>
-                    <CardPane 
+                    <CardPane
                         img={stockDnD}
                         title={"DnD Toolkit"}
                         descript={"New to DnD? Tools, tricks, and data storage for Dungeon Masters and players."}
                         link={"https://hidden-savannah-88913.herokuapp.com/"}
                         buttonLink={"https://github.com/LucasAho/Project-2"}
-                    />   
+                    />
                 </Grid>
                 <Grid item md>
-                    <CardPane 
+                    <CardPane
                         img={stockFriends}
                         title={"Friend Finder"}
                         descript={"Are you more similar to me, my ex girlfriend, or Baby Yoda? (Yes, we all hope it's Baby Yoda.)"}
                         link={"https://quiet-gorge-84311.herokuapp.com/"}
                         buttonLink={"https://github.com/LucasAho/crispy-guacamole"}
-                    />   
+                    />
                 </Grid>
                 <Grid item md>
-                    <CardPane 
+                    <CardPane
                         img={stockTrivia}
                         title={"Animal Trivia"}
                         descript={"Snow leopards, guinea pigs, octopi...oh my! Think you know animals? Let's find out!"}
                         link={"https://lucasaho.github.io/TriviaGame/"}
                         buttonLink={"https://github.com/LucasAho/TriviaGame"}
-                    />   
-                </Grid>        
+                    />
+                </Grid>
             </Grid>
         </Box>
     )
