@@ -24,7 +24,17 @@ const useStyles = makeStyles((theme) => createStyles({
         maxWidth: 200,
         padding: '1rem',
         paddingTop: '0',
+        [theme.breakpoints.down('sm')]: {
+            marginTop: '1rem',
+            backgroundColor: "#193469",
+            color: "#EBE5F9"
+        },
     },
+    button: {
+        [theme.breakpoints.down('sm')]: {
+            color: "#EBE5F9"
+        },
+    }
 }));
 
 export function HeadPane() {
@@ -49,7 +59,7 @@ export function HeadPane() {
 export function CardPane(props) {
     const classes = useStyles();
     return (
-        <Card className={classes.cardRoot} color="darkPrimary" variant="outlined">
+        <Card className={classes.cardRoot} variant="outlined">
             <CardActionArea onClick={event => {
                 window.location.href = props.link;
             }}>
@@ -67,7 +77,7 @@ export function CardPane(props) {
                     </Typography>
                 </CardContent>
             </CardActionArea>
-            <Button size="small" color="dark" onClick={event => {
+            <Button size="small" className={classes.button} onClick={event => {
                 window.location.href = props.buttonLink;
             }}>
                 Checkout the Code

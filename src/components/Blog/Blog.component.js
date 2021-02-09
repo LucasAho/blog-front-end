@@ -8,15 +8,21 @@ import stockMental from "../../imageAssets/stockMental.png";
 const useStyles = makeStyles((theme) => createStyles({
     root: {
         flexGrow: 1,
-        maxWidth: '960px',
         padding: '1rem',
-        backgroundColor: "#180D35"
+        backgroundColor: "#180D35",
+        [theme.breakpoints.up('lg')]: {
+            maxWidth: '1280px'
+        },
     },
     cardStack: {
         paddingTop: "1rem",
+        padding: "1rem",
+        [theme.breakpoints.up('lg')]: {
+            padding: "3rem",
+        },
     },
     bigCard: {
-        paddingBottom: "1rem",
+        paddingBottom: "1.75rem",
     },  
 }));
 
@@ -28,7 +34,7 @@ export default function BlogBar() {
             <AppBar position="static">
                 <HeadPane/>
                 <Grid container align='center' className={classes.cardStack}> 
-                    <Grid item md className={classes.bigCard}>
+                    <Grid item xs={12} md className={classes.bigCard}>
                         <RecentPostPane 
                             title={"Growing Up Suicidal"}
                             date={"Febuary 6th, 2021"}
@@ -37,7 +43,7 @@ export default function BlogBar() {
                             link={"https://docs.google.com/document/d/1xS5POXXUN3dl46hdM00BYt13qZrB8165iTpyMfwHhE8/edit?usp=sharing"}
                         />
                     </Grid>
-                    <Grid item md direction="column">
+                    <Grid item xs={12} md direction="column">
                         <SubPane 
                             title={"The Social Contract"}
                             date={"May 31st, 2020"}

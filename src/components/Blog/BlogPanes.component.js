@@ -18,7 +18,10 @@ const useStyles = makeStyles((theme) => createStyles({
     
     //RecentCard Classes
     cardMain: {
-        maxWidth: 400,
+        maxWidth: 450,
+        [theme.breakpoints.up('lg')]: {
+            maxWidth: '550'
+        },
     },
     media: {
         height: 280,
@@ -26,7 +29,10 @@ const useStyles = makeStyles((theme) => createStyles({
 
     //SmallCard Classes
     cardSmall: {
-        maxWidth: 360,
+        maxWidth: 450,
+        [theme.breakpoints.up('lg')]: {
+            maxWidth: '550px'
+        },
         marginBottom: "2rem",
     },
 }));

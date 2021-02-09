@@ -14,7 +14,7 @@ import placeholder from "../../imageAssets/placeholder.png";
 const useStyles = makeStyles((theme) => createStyles({
     root: {
         display: 'flex',
-      },
+    },
     titleDiv: {
         paddingTop: '1rem',
         paddingBottom: '1rem',
@@ -34,7 +34,11 @@ const useStyles = makeStyles((theme) => createStyles({
         flex: '1 0 auto',
     },
     cover: {
-        width: 300,
+        width: '100%',
+        [theme.breakpoints.only('xs')]: {
+            
+        },
+
     },
     controls: {
         display: 'flex',

@@ -9,7 +9,6 @@ import stockTrivia from "../../imageAssets/stockTrivia.jpg";
 
 const useStyles = makeStyles((theme) => createStyles({
     root: {
-        //flexGrow: 1,
         [theme.breakpoints.up('lg')]: {
             maxWidth: '1280px'
         },
@@ -31,7 +30,7 @@ export default function ProjectBar() {
         <Box className={classes.root} align='center' px='1rem' mx='auto'>
             <HeadPane />
             <Grid container align='center' className={classes.cardStack}>
-                <Grid item md >
+                <Grid item xs={12} sm={6} md={3}>
                     <CardPane
                         img={stockSki}
                         title={"Ski & Board Report"}
@@ -40,7 +39,7 @@ export default function ProjectBar() {
                         buttonLink={"https://github.com/LucasAho/Project1"}
                     />
                 </Grid>
-                <Grid item md>
+                <Grid item xs={12} sm={6} md={3}>
                     <CardPane
                         img={stockDnD}
                         title={"DnD Toolkit"}
@@ -49,7 +48,7 @@ export default function ProjectBar() {
                         buttonLink={"https://github.com/LucasAho/Project-2"}
                     />
                 </Grid>
-                <Grid item md>
+                <Grid item xs={12} sm={6} md={3}>
                     <CardPane
                         img={stockFriends}
                         title={"Friend Finder"}
@@ -58,7 +57,7 @@ export default function ProjectBar() {
                         buttonLink={"https://github.com/LucasAho/crispy-guacamole"}
                     />
                 </Grid>
-                <Grid item md>
+                <Grid item xs={12} sm={6} md={3}>
                     <CardPane
                         img={stockTrivia}
                         title={"Animal Trivia"}

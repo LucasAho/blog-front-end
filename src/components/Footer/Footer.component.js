@@ -5,8 +5,9 @@ import { } from './FooterPanes.component'
 
 const useStyles = makeStyles((theme) => createStyles({
     root: {
-        flexGrow: 1,
-        maxWidth: '960px',
+        [theme.breakpoints.up('lg')]: {
+            maxWidth: '1280px'
+        },
         padding: '1rem',
         backgroundColor: "#180D35"
     },
