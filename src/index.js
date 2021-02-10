@@ -7,12 +7,10 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import theme from './components/Theme/theme.component';
 
 ReactDOM.render(
-  
     <ThemeProvider theme={theme}>
       <App/>
     </ThemeProvider>
-  ,
-  document.getElementById('root')
+  , document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

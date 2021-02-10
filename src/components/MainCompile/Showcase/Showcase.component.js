@@ -2,10 +2,10 @@ import React from 'react';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 import { Grid, Box } from '@material-ui/core';
 import { HeadPane, CardPane } from './ShowcasePanes.component'
-import stockSki from "../../imageAssets/stockSki.jpg";
-import stockDnD from "../../imageAssets/stockDnD.jpg";
-import stockFriends from "../../imageAssets/stockFriends.jpg";
-import stockTrivia from "../../imageAssets/stockTrivia.jpg";
+import stockSki from "../imageAssets/stockSki.jpg";
+import stockDnD from "../imageAssets/stockDnD.jpg";
+import stockFriends from "../imageAssets/stockFriends.jpg";
+import stockTrivia from "../imageAssets/stockTrivia.jpg";
 
 const useStyles = makeStyles((theme) => createStyles({
     root: {

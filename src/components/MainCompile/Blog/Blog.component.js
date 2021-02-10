@@ -3,7 +3,7 @@ import { makeStyles, createStyles } from '@material-ui/core/styles';
 import { Box, Grid } from '@material-ui/core';
 import { HeadPane, RecentPostPane, SubPane } from './BlogPanes.component'
 import AppBar from '@material-ui/core/AppBar';
-import stockMental from "../../imageAssets/stockMental.png";
+import stockMental from "../imageAssets/stockMental.png";
 
 const useStyles = makeStyles((theme) => createStyles({
     root: {

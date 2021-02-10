@@ -6,7 +6,6 @@ import climbDyno from "../../imageAssets/sliderImgs/climbDyno.jpg";
 import climbFace from "../../imageAssets/sliderImgs/climbFace.jpg";
 import fulfordGroup from "../../imageAssets/sliderImgs/fulfordGroup.jpg";
 
-
 export const SliderData = [
     {
         image: climbFace

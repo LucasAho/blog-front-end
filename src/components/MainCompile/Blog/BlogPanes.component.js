@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Typography, Card, CardActions, CardMedia, CardContent, CardActionArea, Button } from '@material-ui/core';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 
@@ -81,11 +82,9 @@ export function RecentPostPane(props) {
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <Button size="small" color="dark" onClick={event => {
-                    window.location.href = props.link;
-                }}>
-                    Checkout the webpage!
-                </Button>
+                <Link to="/blog">
+                    Checkout the full blog!
+                </Link>
             </CardActions>
         </Card>
     );

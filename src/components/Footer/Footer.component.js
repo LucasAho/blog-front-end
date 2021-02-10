@@ -1,13 +1,9 @@
 import React from 'react';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 import { Box, Button, Grid, Tabs, Typography } from '@material-ui/core';
-import { } from './FooterPanes.component'
 
 const useStyles = makeStyles((theme) => createStyles({
     root: {
-        [theme.breakpoints.up('lg')]: {
-            maxWidth: '1280px'
-        },
         padding: '1rem',
         backgroundColor: "#180D35"
     },

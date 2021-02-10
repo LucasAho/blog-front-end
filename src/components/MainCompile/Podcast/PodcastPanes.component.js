@@ -8,7 +8,7 @@ import IconButton from '@material-ui/core/IconButton';
 import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import SkipNextIcon from '@material-ui/icons/SkipNext';
-import placeholder from "../../imageAssets/placeholder.png";
+import placeholder from "../imageAssets/placeholder.png";
 
 
 const useStyles = makeStyles((theme) => createStyles({
