@@ -64,7 +64,7 @@ export function CardPane(props) {
     const classes = useStyles();
     return (
         <Card className={classes.cardRoot} variant="outlined">
-            <CardActionArea onClick={event => {
+            <CardActionArea onclick={event => {
                 window.location.href = props.link;
             }}>
                 <CardMedia
@@ -85,7 +85,7 @@ export function CardPane(props) {
                 window.location.href = props.buttonLink;
             }}>
                 Checkout the Code
-        </Button>
+            </Button>
         </Card>
     );
 }

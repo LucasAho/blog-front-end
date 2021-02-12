@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Typography, Card, CardActions, CardMedia, CardContent, CardActionArea, } from '@material-ui/core';
+import { Typography, Button, Card, CardActions, CardMedia, CardContent, CardActionArea, } from '@material-ui/core';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 
 
@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => createStyles({
     subDiv: {
         paddingBottom: '1rem',
     },
-    
+
     //RecentCard Classes
     cardMain: {
         maxWidth: 450,
@@ -82,9 +82,11 @@ export function RecentPostPane(props) {
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <Link to="/blog">
-                    Checkout the full blog!
-                </Link>
+                <Button size="small" className={classes.button} onClick={event => {
+                    window.location.href = props.link;
+                }}>
+                    Checkout the Blog
+                </Button>
             </CardActions>
         </Card>
     );
