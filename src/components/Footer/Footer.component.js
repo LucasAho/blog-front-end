@@ -5,6 +5,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import EmailIcon from '@material-ui/icons/Email';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import ContactForm from "./ContactForm"; 
 
 const useStyles = makeStyles((theme) => createStyles({
     root: {
@@ -54,24 +55,7 @@ export default function BlogBar() {
     };
     const modalBody = (
         <div style={modalStyle} className={classes.paper}>
-            <h2>Contact Me</h2>
-            <form name="contact" method="POST" data-netlify="true">
-                <p>
-                    <label for="name">Name</label>  
-                    <input type="text" id="name" name="name" />
-                </p>
-                <p>
-                    <label for="Email">Email</label>  
-                    <input type="text" id="email" name="email" />
-                </p>
-                <p>
-                    <label for="message">Message</label>  
-                    <textarea id="message" name="message"></textarea>
-                </p>
-                <p>
-                    <button type="submit">Send</button>
-                </p>
-            </form>
+            <ContactForm/>
         </div>
     );
     return (
