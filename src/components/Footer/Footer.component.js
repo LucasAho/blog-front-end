@@ -17,12 +17,25 @@ const useStyles = makeStyles((theme) => createStyles({
     },
     paper: {
         position: 'absolute',
-        width: 400,
+        width: 500,
         backgroundColor: theme.palette.background.paper,
         border: '2px solid #000',
         boxShadow: theme.shadows[5],
         padding: theme.spacing(2, 4, 3),
     },
+    input: {
+        width: "60%",
+        margin: '.5rem'
+    },
+    messageInput: {
+        margin: '.5rem',
+        marginBottom: '1.5rem'
+    },
+    button : {
+        marginLeft: '.5rem',
+        backgroundColor: "#193469",
+        color: "#FFF"
+    }
 }));
 
 function rand() {
@@ -55,11 +68,11 @@ export default function BlogBar() {
     const modalBody = (
         <div style={modalStyle} className={classes.paper}>
             <form name="contact" action="/contact" method="post" >
-                <input type="hidden" name="form-name" value="contact"/>
-                <TextField required label="Full Name" name="name"/>
-                <TextField required label="Email" name="email"/>
-                <TextField required fullWidth multiline rows={4} label="Message" name="message"/>
-                <Button type="submit">Send</Button>
+                <input type="hidden" name="form-name" value="contact" />
+                <TextField required className={classes.input} label="Full Name" name="name" />
+                <TextField required className={classes.input} label="Email" name="email" />
+                <TextField required className={classes.messageInput} fullWidth multiline rows={4} label="Message" name="message" />
+                <Button className={classes.button} type="submit" variant="outlined">Send</Button>
             </form>
         </div>
     );
