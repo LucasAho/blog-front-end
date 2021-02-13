@@ -3,7 +3,7 @@ import { makeStyles, createStyles } from '@material-ui/core/styles';
 import { Box, Grid, Typography } from '@material-ui/core';
 import ArticleInView from "./Article/Article.component"
 import SidebarMenu from './Sidebar/Sidebar.component';
-
+import Navbar from "./Navbar/Navbar.component";
 const useStyles = makeStyles((theme) => createStyles({
     root: {
         flexGrow: 1,
@@ -19,11 +19,12 @@ export default function BuildBlog() {
     const classes = useStyles();
         return (
             <Box className={classes.root} mx='auto'>
+                <Navbar/>
                 <Grid container>
-                    <Grid item xs={9}>
+                    <Grid item sm={12} md={9}>
                         <ArticleInView/>
                     </Grid>
-                    <Grid item xs={3}>
+                    <Grid item md={3}>
                         <SidebarMenu/>
                     </Grid>
                 </Grid>

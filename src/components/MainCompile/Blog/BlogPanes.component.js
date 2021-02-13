@@ -82,9 +82,7 @@ export function RecentPostPane(props) {
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <Button size="small" className={classes.button} onClick={event => {
-                    window.location.href = props.link;
-                }}>
+                <Button component={Link} to="/blog"> 
                     Checkout the Blog
                 </Button>
             </CardActions>

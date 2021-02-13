@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
     backGround: {
-        backgroundColor: "#1180D3"
+        backgroundColor: "#FFF"
     }
 });
 
@@ -16,9 +16,9 @@ class ArticleInView extends Component {
         const { classes } = this.props
         return (
                 <Box className={classes.backGround}>
-                            <Typography variant='h2'>
-                                The Social Contract
-                            </Typography>
+                    <Typography variant='h2'>
+                        The Social Contract
+                    </Typography>
                     <Typography variant='body1' paragraph indent>
                         Throughout the course of human history, we have seen countless societies and governing bodies rise and fall. 
                         The basis for creating society is apparent, it has led to improvements and progress in humanity’s quality of life, ability to cooperate with and understand the world around us, 

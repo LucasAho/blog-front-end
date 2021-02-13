@@ -64,7 +64,7 @@ export function HeadPane() {
 
             <div className={classes.subTextDiv}>
                 <Typography variant="p">
-                    WiP podcast detailing stories and lore from my fictional universe
+                    Work in Progress podcast detailing stories and lore from my fictional universe. Release of first episode is soft scheduled for March 5th!
                 </Typography>
             </div>
         </Box>
@@ -82,7 +82,7 @@ export function MainCard() {
                         Episode 1
                     </Typography>
                     <Typography variant="subtitle1" color="textSecondary">
-                        ToM
+                        Expected release date: Mar/5/21
                     </Typography>
                 </CardContent>
                 <div className={classes.controls}>
