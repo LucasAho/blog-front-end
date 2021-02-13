@@ -58,7 +58,7 @@ export function HeadPane() {
         <Box>
             <div className={classes.titleDiv}>
                 <Typography className={classes.title} variant="h3" noWrap>
-                    Tales of Maalima
+                    Podcast
                 </Typography>
             </div>
 

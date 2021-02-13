@@ -17,7 +17,10 @@ const useStyles = makeStyles((theme) => createStyles({
     },
     paper: {
         position: 'absolute',
-        width: 500,
+        width: '30%',
+        [theme.breakpoints.only('xs')]: {
+            width: "50%"
+        },
         backgroundColor: theme.palette.background.paper,
         border: '2px solid #000',
         boxShadow: theme.shadows[5],
