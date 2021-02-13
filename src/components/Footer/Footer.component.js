@@ -54,10 +54,10 @@ export default function BlogBar() {
     };
     const modalBody = (
         <div style={modalStyle} className={classes.paper}>
-                <form name="contact" noValidate netlify autoComplete="off">
-                <TextField required label="Full Name" />
-                <TextField required label="Email or Contact Number" />
-                <TextField required fullWidth label="Message" />
+            <form name="contact" action="/contact" method="post" > 
+                <TextField required label="Full Name" name="name"/>
+                <TextField required label="Email" name="email"/>
+                <TextField required fullWidth multiline rows={4} label="Message" name="message"/>
                 <Button type="submit">Send</Button>
             </form>
         </div>
