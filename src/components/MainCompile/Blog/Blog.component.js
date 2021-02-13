@@ -3,7 +3,7 @@ import { makeStyles, createStyles } from '@material-ui/core/styles';
 import { Box, Grid } from '@material-ui/core';
 import { HeadPane, RecentPostPane, SubPane } from './BlogPanes.component'
 import AppBar from '@material-ui/core/AppBar';
-import stockMental from "../imageAssets/stockMental.png";
+import mentalStock from "../imageAssets/mentalStock.jpeg";
 
 const useStyles = makeStyles((theme) => createStyles({
     root: {
@@ -38,7 +38,7 @@ export default function BlogBar() {
                         <RecentPostPane 
                             title={"Growing Up Suicidal"}
                             date={"Febuary 6th, 2021"}
-                            img={stockMental}
+                            img={mentalStock}
                             descript={"Life’s a bitch, and then you die. Or at least that is what I used to believe, and for over half of my life, I eagerly awaited the second half of that statement[...]"}
                             link={"https://docs.google.com/document/d/1xS5POXXUN3dl46hdM00BYt13qZrB8165iTpyMfwHhE8/edit?usp=sharing"}
                         />
