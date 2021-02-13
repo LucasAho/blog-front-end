@@ -54,7 +54,8 @@ export default function BlogBar() {
     };
     const modalBody = (
         <div style={modalStyle} className={classes.paper}>
-            <form name="contact" action="/contact" method="post" > 
+            <form name="contact" action="/contact" method="post" >
+                <input type="hidden" name="form-name" value="contact"/>
                 <TextField required label="Full Name" name="name"/>
                 <TextField required label="Email" name="email"/>
                 <TextField required fullWidth multiline rows={4} label="Message" name="message"/>
