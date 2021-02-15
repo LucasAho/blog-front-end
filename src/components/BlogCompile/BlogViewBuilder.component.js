@@ -3,6 +3,8 @@ import { makeStyles, createStyles } from '@material-ui/core/styles';
 import { Box, Grid, Typography } from '@material-ui/core';
 import ArticleInView from "./Article/Article.component"
 import SidebarMenu from './Sidebar/Sidebar.component';
+import RecentArticleComponent from './Article/RecentArticle.component';
+import Navbar from "./Navbar/Navbar.component";
 
 const useStyles = makeStyles((theme) => createStyles({
     root: {
@@ -14,19 +16,22 @@ const useStyles = makeStyles((theme) => createStyles({
     },
 }));
 
-export default function BuildBlog() {
 
+export default function BuildBlog() {
     const classes = useStyles();
-        return (
-            <Box className={classes.root} mx='auto'>
-                <Grid container>
-                    <Grid item xs={9}>
-                        <ArticleInView/>
-                    </Grid>
-                    <Grid item xs={3}>
-                        <SidebarMenu/>
-                    </Grid>
+    return (
+        <Box className={classes.root} mx='auto'>
+            <Navbar />
+            <Grid container>
+                <Grid item md={9}>
+                    <RecentArticleComponent 
+                        articleId={"6029ac743b62d107e0450580"}
+                    />
                 </Grid>
-            </Box>
-        );
-    }
+                <Grid item sm={3}>
+                    <SidebarMenu />
+                </Grid>
+            </Grid>
+        </Box>
+    );
+}
