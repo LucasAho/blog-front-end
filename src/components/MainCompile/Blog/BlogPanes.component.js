@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Typography, Button, Card, CardActions, CardMedia, CardContent, CardActionArea, } from '@material-ui/core';
+import React, { useEffect, useState } from 'react';
+import { Link, useHistory, withRouter } from 'react-router-dom';
+import { Typography, Card, CardActions, CardMedia, CardContent, CardActionArea, } from '@material-ui/core';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 
 
@@ -56,14 +56,14 @@ export function HeadPane() {
         </div>
     );
 }
-
-export function RecentPostPane(props) {
+function RecentPostPane(props) {
     const classes = useStyles();
+    const history = useHistory();
+
+    const routeNew = (id) => history.push("/blog/" + id);
     return (
         <Card className={classes.cardMain} variant="outlined">
-            <CardActionArea onClick={event => {
-                window.location.href = props.link;
-            }}>
+            <CardActionArea onClick={() => routeNew(props.link)}>
                 <CardMedia
                     className={classes.media}
                     image={props.img}
@@ -82,21 +82,21 @@ export function RecentPostPane(props) {
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <Link className={classes.button} to={"/blog"}>
-                    Checkout the Blog
+                <Link className={classes.button} to={"/blog/6029e8223b62d107e0450582"}>
+                    Checkout the Blog!
                 </Link>
             </CardActions>
         </Card>
     );
 }
-
+export default withRouter(RecentPostPane);
 export function SubPane(props) {
     const classes = useStyles();
+    const history = useHistory();
+    const routeNew = (id) => history.push("/blog/" + id);
     return (
         <Card className={classes.cardSmall} variant="outlined">
-            <CardActionArea onClick={event => {
-                window.location.href = props.link;
-            }}>
+            <CardActionArea onClick={() => routeNew(props.link)}>
                 <CardContent>
                     <Typography gutterBottom>
                         {props.date}

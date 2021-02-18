@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
-import { Box, Typography } from '@material-ui/core';
-import { withStyles } from '@material-ui/core/styles';
+import React, { Component, useState, useEffect } from 'react';
+import { Grid, Box, Typography } from '@material-ui/core';
+import { Link, useHistory, withRouter } from 'react-router-dom';
+import { withStyles, makeStyles, createStyles } from '@material-ui/core/styles';
 import API from "../../../utility/blogApi";
 
 const styles = theme => ({
@@ -10,45 +11,70 @@ const styles = theme => ({
 });
 
 class RecentArticle extends Component {
-    state = {
-        searchNodes: "",
-        title: "",
-        blurb: "",
-        paragraphs: []
-    };
-    componentDidMount() {
-        this.loadArticle(this.props.articleId);
+    constructor(props) {
+        super(props);
+        this.state = {
+            searchNodes: "",
+            title: "",
+            blurb: "",
+            date: "",
+            image: "",
+            paragraphs: []
+        }
+    }
+    componentDidUpdate(nextProps) {
+        if (this.props !== nextProps) {
+            this.refreshArticle();
+        }
+    }
+    
+    refreshArticle = () => {
+        this.setState({
+            title: this.props.artObj.title,
+            blurb: this.props.artObj.blurb,
+            date: this.props.artObj.dateWritten,
+            image: this.props.artObj.image,
+            genre: this.props.artObj.genre,
+            paragraphs: this.props.artObj.paragraphs
+        });
+    }
 
-    }
-    loadArticle = id => {
-        API.getPostById(id)
-            .then(res => {
-                this.setState({
-                    title: res.data.title,
-                    blurb: res.data.blurb,
-                    paragraphs: res.data.paragraphs
-                });
-            })
-            .catch(err => console.log(err));
-    }
+
 
     render() {
-        const { classes } = this.props
+        const { classes } = this.props;
         return (
             <Box className={classes.backGround} mx="auto" px="1rem">
-                <Typography variant='h2' align="center">
-                    {this.state.title}
-                </Typography>
-                <Typography variant="subtitle1" align="center">
-                    {this.state.blurb}
-                </Typography>
-                {this.state.paragraphs.map(p => 
-                    <div>
-                    <br/>
-                        <Typography variant="p" align="justify">{p}</Typography>
-                    <br/>    
-                    </div>
-                )}
+                <Grid container>
+                    <Grid item sm={8} align="center">
+                        <Typography variant='h2' align="center">
+                            {this.state.title}
+                        </Typography>
+                        <Box mx="auto" align="center">
+                                <Typography variant='subtitle2' align="center">
+                                    <i>Posted: </i> {this.state.date + " | "}
+                                    <i>by: </i>Lucas Asher {" | "}
+                                    <i>topic: </i> <Link>{this.state.genre}</Link>
+                                </Typography>
+                        </Box>
+                    </Grid>
+                    <Grid item sm={4}>
+                        <Box my="auto">
+                            <img alt="Dynamic" width="100%" src={this.state.image}></img>
+                        </Box>
+                    </Grid>
+                </Grid>
+                <Box pt="1rem" align="center" width="70%" mx="auto">
+                    <Typography variant="subtitle1" align="center">
+                        {this.state.blurb}
+                    </Typography>
+                </Box>        
+
+                    {this.state.paragraphs.map((p, i) =>
+                        <Box my='1rem' key={i}>
+                            <Typography variant="body1" align="justify">{p}</Typography>
+                        </Box>
+                    )}
             </Box>
         )
     }
