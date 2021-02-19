@@ -8,17 +8,6 @@ const useStyles = makeStyles((theme) => createStyles({
     root: {
         
     },
-    headText: {
-        paddingBottom: '1rem',
-        color: "#EBE5F9"
-    },
-    subText: {
-        color: "#EBE5F9",
-        [theme.breakpoints.only('xs')]: {
-            width: '90%',
-            
-        },
-    },
     //Text Classes
     bioDiv: {
         padding: '1rem'
@@ -34,33 +23,13 @@ const useStyles = makeStyles((theme) => createStyles({
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        paddingTop: '2.5rem'
+        paddingTop: '2.5rem',
     },
     media: {
-        width: '100%',
+        maxWidth: "90%",
         borderRadius: 10
-    }
+    },
 }));
-
-export function BioHeadPane() {
-    const classes = useStyles();
-    return (
-        <Box className={classes.root}>
-            <Grid container>
-                <Grid item xs={12}>
-                    <Typography align="center" className={classes.headText} variant="h3">
-                        Lucas Asher
-                    </Typography>
-                </Grid>
-                <Grid item sm={12}>
-                    <Typography align="center" className={classes.subText} variant="h6">
-                        Author, rock climber, and full stack web developer
-                    </Typography>
-                </Grid>
-            </Grid>
-        </Box>
-    );
-}
 
 export function BioTextPane() {
     const classes = useStyles();
@@ -93,16 +62,18 @@ export const ImageSlider = ({ slides }) => {
         return null;
     }
     return (
-        <div className={classes.slider}>
-            {SliderData.map((slide, index) => {
-                return (
-                    <div className={index === current ? 'slide active' : 'slide'} key={index}>
-                        {index === current && (
-                            <img alt='Carousel' className={classes.media} src={slide.image} />
-                        )}
-                    </div>
-                );
-            })}
-        </div>
+        <Box align="center" >
+            <div className={classes.slider}>
+                {SliderData.map((slide, index) => {
+                    return (
+                        <div className={index === current ? 'slide active' : 'slide'} key={index}>
+                            {index === current && (
+                                <img alt='Carousel' className={classes.media} src={slide.image} />
+                            )}
+                        </div>
+                    );
+                })}
+            </div>
+        </Box>
     );
 }

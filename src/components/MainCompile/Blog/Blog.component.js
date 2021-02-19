@@ -4,6 +4,7 @@ import { Box, Grid } from '@material-ui/core';
 import RecentPostPane, { HeadPane, SubPane } from './BlogPanes.component'
 import AppBar from '@material-ui/core/AppBar';
 import mentalStock from "../imageAssets/mentalStock.jpeg";
+import HeaderReusable from './../Reusables/HeaderReusable.component';
 
 const useStyles = makeStyles((theme) => createStyles({
     root: {
@@ -32,7 +33,11 @@ export default function BlogBar() {
     return (
         <Box className={classes.root} mx='auto' >
             <AppBar position="static">
-                <HeadPane/>
+                <HeaderReusable
+                    headText={"The Creative Process"}
+                    subText={"A blog where I share a mixture of politically minded essays, stories of my personal walk through life, and creative works associated with my world building and upcoming series of novels"} 
+                    variant={"p"}
+                />
                 <Grid container align='center' className={classes.cardStack}> 
                     <Grid item xs={12} md className={classes.bigCard}>
                         <RecentPostPane 

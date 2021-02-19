@@ -4,18 +4,6 @@ import { makeStyles, createStyles } from '@material-ui/core/styles';
 
 
 const useStyles = makeStyles((theme) => createStyles({
-    titleDiv: {
-        paddingTop: '1rem',
-        paddingBottom: '1rem',
-    },
-
-    title: {
-        textAlign: 'center',
-    },
-    subTextDiv: {
-        textAlign: 'center',
-        marginBottom: '1rem'
-    },
     media: {
         height: 300,
         width: '100%'
@@ -40,25 +28,6 @@ const useStyles = makeStyles((theme) => createStyles({
         },
     }
 }));
-
-export function HeadPane() {
-    const classes = useStyles();
-    return (
-        <Box>
-            <div className={classes.titleDiv}>
-                <Typography className={classes.title} variant="h3" noWrap>
-                    Portfolio
-                </Typography>
-            </div>
-
-            <div className={classes.subTextDiv}>
-                <Typography variant="p">
-                    A showcase of skills cultivated in full stack web development. The following apps display knowledge of creating MERN stacks, building out RESTful APIs, utilizating encryption libraries, and competency in visual design.
-                </Typography>
-            </div>
-        </Box>
-    );
-}
 
 export function CardPane(props) {
     const classes = useStyles();

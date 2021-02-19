@@ -38,24 +38,6 @@ const useStyles = makeStyles((theme) => createStyles({
     },
 }));
 
-export function HeadPane() {
-    const classes = useStyles();
-    return (
-        <div>
-            <div className={classes.headerDiv}>
-                <Typography className={classes.headText} variant="h3" noWrap>
-                    Blog
-                </Typography>
-            </div>
-
-            <div align="center" className={classes.subDiv}>
-                <Typography variant="p">
-                    A mixture of politically minded essays, stories of my personal walk through life, and creative works associated with my world building and novel series
-                </Typography>
-            </div>
-        </div>
-    );
-}
 function RecentPostPane(props) {
     const classes = useStyles();
     const history = useHistory();

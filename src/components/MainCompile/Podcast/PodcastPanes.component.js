@@ -14,17 +14,7 @@ import placeholder from "../imageAssets/placeholder.png";
 const useStyles = makeStyles((theme) => createStyles({
     root: {
         display: 'flex',
-    },
-    titleDiv: {
-        paddingTop: '1rem',
-        paddingBottom: '1rem',
-    },
-    title: {
-        textAlign: 'center',
-    },
-    subTextDiv: {
-        textAlign: 'center',
-        marginBottom: '1rem'
+        marginTop:"1rem"
     },
     details: {
         display: 'flex',
@@ -38,7 +28,6 @@ const useStyles = makeStyles((theme) => createStyles({
         [theme.breakpoints.only('xs')]: {
             
         },
-
     },
     controls: {
         display: 'flex',
@@ -51,25 +40,6 @@ const useStyles = makeStyles((theme) => createStyles({
         width: 38,
     },
 }));
-
-export function HeadPane() {
-    const classes = useStyles();
-    return (
-        <Box>
-            <div className={classes.titleDiv}>
-                <Typography className={classes.title} variant="h3" noWrap>
-                    Podcast
-                </Typography>
-            </div>
-
-            <div className={classes.subTextDiv}>
-                <Typography variant="p">
-                    Work in progress podcast detailing lore from my fictional universe and insight into my creative process
-                </Typography>
-            </div>
-        </Box>
-    );
-}
 
 export function MainCard() {
     const classes = useStyles();

@@ -1,11 +1,12 @@
 import React from 'react';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 import { Grid, Box } from '@material-ui/core';
-import { HeadPane, CardPane } from './ShowcasePanes.component'
+import { CardPane } from './ShowcasePanes.component'
 import stockSki from "../imageAssets/stockSki.jpg";
 import stockDnD from "../imageAssets/stockDnD.jpg";
 import stockFriends from "../imageAssets/stockFriends.jpg";
 import stockTrivia from "../imageAssets/stockTrivia.jpg";
+import HeaderReusable from './../Reusables/HeaderReusable.component';
 
 const useStyles = makeStyles((theme) => createStyles({
     root: {
@@ -28,7 +29,11 @@ export default function ProjectBar() {
 
     return (
         <Box className={classes.root} align='center' px='1rem' mx='auto'>
-            <HeadPane />
+            <HeaderReusable
+                headText={"Portfolio"}
+                subText={"A showcase of skills cultivated in full stack web development. The following apps display proficiency in building out RESTful APIs, utilization of NODE.JS and React, comprehension of ES6, and competency in visual design."} 
+                variant={"p"}
+            />
             <Grid container align='center' className={classes.cardStack}>
                 <Grid item xs={12} sm={6} md={3}>
                     <CardPane
