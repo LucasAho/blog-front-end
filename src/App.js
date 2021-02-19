@@ -4,6 +4,7 @@ import Footer from './components/Footer/Footer.component';
 import BuildHome from './components/MainCompile/ViewBuilder.component';
 import BuildBlog from './components/BlogCompile/BlogViewBuilder.component';
 import ArticleView from './components/BlogCompile/ArticleView.component';
+import { Element } from 'react-scroll';
 
 function App() {
   return (
@@ -14,7 +15,10 @@ function App() {
         <Route exact path="/blog/:id" component={ArticleView} />
 
       </Switch>
-      <Footer />
+
+      <Element id='contact' name='contact'>
+        <Footer />
+      </Element>
     </Router>
   );
 }

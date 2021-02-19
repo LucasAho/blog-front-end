@@ -71,6 +71,11 @@ const MenuButton = () => {
                 }}>
                     Podcast
                 </MenuItem>
+                <MenuItem className={classes.menuItem} onClick={()=>{
+                    handleClose('contact')
+                }}>
+                    Contact
+                </MenuItem>
             </Menu>
             <IconButton
                 edge="start"
