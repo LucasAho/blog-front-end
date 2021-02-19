@@ -45,11 +45,17 @@ class RecentArticle extends Component {
         const { classes } = this.props;
         return (
             <Box className={classes.backGround} mx="auto" px="1rem">
-                <Grid container>
+                <Grid container justify="center">
                     <Grid item sm={8} align="center">
-                        <Typography variant='h2' align="center">
-                            {this.state.title}
-                        </Typography>
+                            {
+                                this.state.title ?
+                                <Typography variant='h2' align="center">
+                                    {this.state.title}
+                                </Typography> : 
+                                <Box>
+                                    <h1>Sorry, bug here... You can refresh or select another link in the meantime.</h1>
+                                </Box>
+                                }
                         <Box mx="auto" align="center">
                                 <Typography variant='subtitle2' align="center">
                                     <i>Posted: </i> {this.state.date + " | "}
@@ -69,12 +75,11 @@ class RecentArticle extends Component {
                         {this.state.blurb}
                     </Typography>
                 </Box>        
-
-                    {this.state.paragraphs.map((p, i) =>
-                        <Box my='1rem' key={i}>
-                            <Typography variant="body1" align="justify">{p}</Typography>
-                        </Box>
-                    )}
+                {this.state.paragraphs.map((p, i) =>
+                    <Box my='1rem' key={i}>
+                        <Typography variant="body1" align="justify">{p}</Typography>
+                    </Box>
+                )}
             </Box>
         )
     }

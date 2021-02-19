@@ -2,12 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 import { Box, Grid, Typography } from '@material-ui/core';
-//import ArticleInView from "./Article/Article.component"
 import SidebarMenu from './Sidebar/Sidebar.component';
-//import RecentArticleComponent from './Article/RecentArticle.component';
 import Navbar from "./Navbar/Navbar.component";
 import API from '../../utility/blogApi';
-import ArticleCardComponent from './Article/ArticleCard.component';
 import RecentArticle from './Article/RecentArticle.component';
 
 const useStyles = makeStyles((theme) => createStyles({
@@ -20,15 +17,6 @@ const useStyles = makeStyles((theme) => createStyles({
     },
 }));
 
-/*const parseAPI = () => {
-    let resObj;
-    API.getAllPosts()
-        .then(res => {
-            return(res.data);
-            //console.log(resObj);
-        })
-        .catch(err => console.log(err));
-}*/
 
 export default function ArticleView(props) {
     const classes = useStyles();
@@ -40,8 +28,6 @@ export default function ArticleView(props) {
         })
         .catch(err => console.log(err));
     },[props.match.params.id]);
-    //let artObj = parseAPI();
-    //console.log(artObj);
     return (
         <Box className={classes.root} mx='auto'>
             <Navbar />
