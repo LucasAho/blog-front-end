@@ -25,9 +25,6 @@ const useStyles = makeStyles((theme) => createStyles({
     },
     cover: {
         width: '100%',
-        [theme.breakpoints.only('xs')]: {
-            
-        },
     },
     controls: {
         display: 'flex',

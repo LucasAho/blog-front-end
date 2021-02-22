@@ -22,7 +22,7 @@ export default function ConLang(props) {
     return (
         <Box className={classes.root} mx="auto" px="1rem">
             <Grid container justify="center">
-                <Grid item sm={7} align="center">
+                <Grid item md={7} align="center">
                     <Typography variant='h2' align="center">
                         The First Pillar of the Old Stone
                     </Typography> : 
@@ -34,7 +34,7 @@ export default function ConLang(props) {
                         </Typography>
                     </Box>
                 </Grid>
-                <Grid item sm={4} >
+                <Grid item md={4} >
                     <Box my="1rem" border={2}>
                         <img alt="Tukren Script" width="100%" src={Commandments}></img>
                     </Box>
@@ -47,7 +47,7 @@ export default function ConLang(props) {
                 <img alt="Tukren Script" width="100%" src={FirstPillarFormatted}></img>
             </Box>
             <Grid container spacing={4}> 
-                <Grid item sm={6}>
+                <Grid item md={6}>
                     <Typography variant="h4" gutterBottom align="justify">
                         IPA Tukrøn
                     </Typography>
@@ -59,7 +59,7 @@ export default function ConLang(props) {
                         yune dan-rad-REN neer-ZLAT DAH-mees ee-ro-HI-ren do-TEMF keent slam-OONK botd, geen kai do-TEMF wearz zab-sleets-DAG ttak-OONK.
                     </Typography>
                 </Grid> 
-                <Grid item sm={6}>
+                <Grid item md={6}>
                     <Typography variant="h4" gutterBottom align="justify">
                         English Full Translation
                     </Typography>
@@ -69,22 +69,22 @@ export default function ConLang(props) {
                 </Grid>
             </Grid>
             <Grid container spacing={3}> 
-                <Grid item sm={4}>
+                <Grid item md={4}>
                     <Typography variant="h5" align="center">
                         Tukrøn Phrase
                     </Typography>
                 </Grid>
-                <Grid item sm={4}>
+                <Grid item md={4}>
                     <Typography variant="h5" align="center">
                         Literal Translation
                     </Typography>
                 </Grid>
-                <Grid item sm={4}>
+                <Grid item md={4}>
                     <Typography variant="h5" align="center">
                         Interpretation
                     </Typography>
                 </Grid>
-                <Grid item sm={4}>
+                <Grid item md={4}>
                     <Typography variant="body1" align="justify">
                         jun dan'ɹadɹøn niɹɮat da:mis 
                     </Typography>
