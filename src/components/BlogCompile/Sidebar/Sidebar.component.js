@@ -48,8 +48,9 @@ class SidebarMenu extends Component {
                             </Link>
                         </Grid>
                     )}
-                    
-
+                    <Link to={"/blog/conlang"}>
+                        First Pillar of the Old Stone
+                    </Link>
                 </Grid>
             </Box>
     )}

@@ -11,7 +11,7 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/" component={BuildHome} />
-        <Route exact path="/blog" component={BuildBlog} />
+        <Route exact path="/blog/conLang" component={BuildBlog} />
         <Route exact path="/blog/:id" component={ArticleView} />
 
       </Switch>

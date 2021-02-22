@@ -72,6 +72,7 @@ export default function Navbar() {
             {...a11yProps('one')}
           />
           <Tab value="two" label="Mental Health" {...a11yProps('two')} />
+          <Tab value="three" label="Constructed Languages" {...a11yProps('three')} />
         </Tabs>
       </AppBar>
       <TabPanel value={value} index="zero">
@@ -82,6 +83,9 @@ export default function Navbar() {
       </TabPanel>
       <TabPanel value={value} index="two">
         <Link to="/blog/6029e8223b62d107e0450582" className={classes.link}><Button>Escaping Suicide</Button></Link>
+      </TabPanel>
+      <TabPanel value={value} index="three">
+        <Link to="/blog/conlang" className={classes.link}><Button>Tukrøn Basics</Button></Link>
       </TabPanel>
     </div>
   );

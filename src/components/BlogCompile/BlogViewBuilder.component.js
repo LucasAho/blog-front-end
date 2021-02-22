@@ -4,12 +4,13 @@ import { Box, Grid, Typography } from '@material-ui/core';
 import SidebarMenu from './Sidebar/Sidebar.component';
 import Navbar from "./Navbar/Navbar.component";
 import RecentArticle from './Article/RecentArticle.component';
+import ConLang from './Article/conLangAlphabet.component';
 
 const useStyles = makeStyles((theme) => createStyles({
     root: {
         flexGrow: 1,
         [theme.breakpoints.up('lg')]: {
-            backgroundColor: "#193469",
+            //backgroundColor: "#193469",
             maxWidth: '1280px'
         },
     },
@@ -22,6 +23,7 @@ export default function BuildBlog(props) {
             <Navbar />
             <Grid container>
                 <Grid item md={9}>
+                    <ConLang/>
                 </Grid>
                 <Grid item sm={3}>
                     <SidebarMenu />
