@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => createStyles({
         [theme.breakpoints.up('md')]: {
             maxWidth: '1080px'
         },
-        paddingTop: "1rem",
+        paddingTop: "1.5rem",
     },
 }));
 
@@ -31,7 +31,7 @@ export default function ProjectBar() {
         <Box className={classes.root} align='center' px='1rem' mx='auto'>
             <HeaderReusable
                 headText={"Portfolio"}
-                subText={"A showcase of skills cultivated in full stack web development. The following apps display proficiency in building out RESTful APIs, utilization of NODE.JS and React, comprehension of ES6, and competency in visual design."} 
+                subText={"A showcase of skills cultivated in full stack web development. The following applications display proficiency in building out RESTful APIs, utilization of NODE.JS and React, comprehension of ES6, and competency in visual design."} 
                 variant={"p"}
             />
             <Grid container align='center' className={classes.cardStack}>

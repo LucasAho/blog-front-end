@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => createStyles({
     },
     bioText: {
         paddingTop: '1rem',
-        color: "#EBE5F9",
+        //color: "#EBE5F9",
     },
     
     //ImageSlider Classes
@@ -36,14 +36,14 @@ export function BioTextPane() {
     return (
         <div className={classes.bioDiv}>
             <Typography className={classes.bioText} align="left" variant="body1">
-                Hello! I am a full stack web developer located out of Colorado. I work my absolute hardest towards every goal, both in my personal and professional life.
+                Hello! I am a full stack web developer located out of Colorado. I work my absolute hardest towards every goal, both in my personal and professional lives.
             </Typography>
             <Typography className={classes.bioText} align="left" variant="body1">
                 When I'm not honing my programming abilities, I love rock climbing and hiking.
                 I have also spent the last two years worldbuilding: writing three constructed languages, drafting my manuscript, and sculpting a universe.
             </Typography>
             <Typography className={classes.bioText} align="left" variant="body1">
-                This webpage navigates from my programming experience to my creative endeavors, and will be regularly updated as I expand my horizons.
+                This webpage navigates from my programming experience to my creative endeavors; it will be regularly updated as I expand my horizons.
             </Typography>
         </div>
     );

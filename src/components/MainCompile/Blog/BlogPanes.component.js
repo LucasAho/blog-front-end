@@ -25,7 +25,8 @@ const useStyles = makeStyles((theme) => createStyles({
         },
     },
     media: {
-        height: 280,
+        height: 200,
+        padding: '1rem',
     },
 
     //SmallCard Classes
@@ -64,7 +65,7 @@ function RecentPostPane(props) {
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <Link className={classes.button} to={"/blog/6029e8223b62d107e0450582"}>
+                <Link className={classes.button} to={"/blog/60340ddb95cb383ea4723058"}>
                     Checkout the Blog!
                 </Link>
             </CardActions>

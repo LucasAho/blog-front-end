@@ -1,9 +1,9 @@
 import React from 'react';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 import { Box, Grid } from '@material-ui/core';
-import RecentPostPane, { HeadPane, SubPane } from './BlogPanes.component'
+import RecentPostPane, { SubPane } from './BlogPanes.component'
 import AppBar from '@material-ui/core/AppBar';
-import mentalStock from "../imageAssets/mentalStock.jpeg";
+import CommandsBg from "../imageAssets/CommandsBg.png";
 import HeaderReusable from './../Reusables/HeaderReusable.component';
 
 const useStyles = makeStyles((theme) => createStyles({
@@ -41,19 +41,19 @@ export default function BlogBar() {
                 <Grid container align='center' className={classes.cardStack}> 
                     <Grid item xs={12} md className={classes.bigCard}>
                         <RecentPostPane 
-                            title={"Escaping Suicide"}
-                            date={"Febuary 6th, 2021"}
-                            img={mentalStock}
-                            descript={"Life’s a bitch, and then you die. Or at least that is what I used to believe, and for over half of my life, I eagerly awaited the second half of that statement[...]"}
-                            link={"6029e8223b62d107e0450582"}
+                            title={"First Pillar of the Old Stone"}
+                            date={"February 22nd, 2021"}
+                            img={CommandsBg}
+                            descript={"The first of six pillars supporting Oradren's Temple. The six pillars are analogous to the Judaic ten commandments in Rohiren orthodox faith."}
+                            link={"60340ddb95cb383ea4723058"}
                         />
                     </Grid>
                     <Grid item xs={12} md direction="column">
                         <SubPane 
-                            title={"The Social Contract"}
-                            date={"May 31st, 2020"}
-                            descript={"Throughout the course of human history, we have seen countless societies and governing bodies rise and fall. The basis for creating society is apparent, it has led to improvements and progress in humanity’s quality of life, ability to cooperate with and understand[...]"}
-                            link={"6029ac743b62d107e0450580"}
+                            title={"Escaping Suicide"}
+                            date={"February"}
+                            descript={"Overcoming suicidal ideation has been the hardest battle of my life. Looking back from a place of stability and maturity, I share my jouney in the hopes of helping others on the same path."}
+                            link={"6029e8223b62d107e0450582"}
                         />
                         <SubPane 
                             title={"Accountability and Representation"}

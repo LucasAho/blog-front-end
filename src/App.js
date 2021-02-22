@@ -11,7 +11,7 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/" component={BuildHome} />
-        <Route exact path="/blog/conLang" component={BuildBlog} />
+        <Route exact path="/blog/60340ddb95cb383ea4723058" component={BuildBlog} />
         <Route exact path="/blog/:id" component={ArticleView} />
 
       </Switch>

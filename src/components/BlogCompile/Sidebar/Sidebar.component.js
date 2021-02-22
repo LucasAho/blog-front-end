@@ -37,20 +37,20 @@ class SidebarMenu extends Component {
         const { classes } = this.props
         return (
             <Box className={classes.backGround}>
-                <Grid container direction='column'>
+                <Grid container spacing={2} direction='column'>
                     <Typography variant="h5">
                         Recent Articles
                     </Typography>
-                    {this.state.apiObj.map((obj, i) => 
+
+                    {this.state.apiObj.map((obj, i) =>
+                        
                         <Grid item key={i}>
                             <Link to={"/blog/" + obj._id }>
                                 {obj.title}
                             </Link>
                         </Grid>
                     )}
-                    <Link to={"/blog/conlang"}>
-                        First Pillar of the Old Stone
-                    </Link>
+                    
                 </Grid>
             </Box>
     )}

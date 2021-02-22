@@ -3,7 +3,6 @@ import { makeStyles, createStyles } from '@material-ui/core/styles';
 import { Box, Grid, Typography } from '@material-ui/core';
 import SidebarMenu from './Sidebar/Sidebar.component';
 import Navbar from "./Navbar/Navbar.component";
-import RecentArticle from './Article/RecentArticle.component';
 import ConLang from './Article/conLangAlphabet.component';
 
 const useStyles = makeStyles((theme) => createStyles({
