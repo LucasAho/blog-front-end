@@ -77,7 +77,7 @@ export default function ConLang(props) {
                         English Full Translation
                     </Typography>
                     <Typography variant="body1" align="justify">
-                        May the people of stone only deepen the colony in the name of the divine search, lest they lead the colony into the unknowable cavern.
+                        May the people of stone only deepen the colony in the name of the divine search, lest they lead the colony into the unknowable evil.
                     </Typography>
                 </Grid>
             </Grid>
