@@ -44,20 +44,25 @@ export default function ConLang(props) {
             <Box pt="2rem" mx="auto" pb='1rem' align="center" width="100%"> 
                 <Typography variant="body1" align="left" paragraph>
                     The religion celebrated across all known Rohíren colonies is broken into many sects, each separate colony celebrating the same god by various means. 
-                    The only absolute in these globe-spanning variants is their unbroken adherence to the 6 Pillars, a set of standards that the Rohíren kings and commonfolk alike 
-                    must follow, as one in our world might follow the 10 commandments or eightfold path. <br/> It is only by this faith that the colonies maintain uninterrupted progress towards their united goal: 
+                    The only absolute in these globe-spanning variants is their unbroken adherence to the 6 Pillars, a set of standards that Rohíren kings and commonfolk alike 
+                    must follow as one in our world might follow the 10 commandments or eightfold path. 
+                    <br/> 
+                    It is only by this faith that the colonies maintain uninterupted progress towards their united goal: 
                     uncovering the mythic chamber of the Old Stone and initiating a golden age for their species.
-                    While this is most likely mere superstition, these rules do provide an undeniable boon towards maintaining the colony's stability in their confined environments.
+                    While this is most likely mere superstition, these rules do provide an undeniable boon towards maintaining the colony's stability in their confined environments. 
+                    <br/>
+                    Below is the first of these commands, along with a guide on pronouncing and interpreting it.
+
                 </Typography>
                 <Typography variant="h6" align="center" gutterBottom>
-                    <i>The first of six pillars supporting Oradren's Temple.</i>
+                    <i>The first pillar of Oradren's temple</i>
                 </Typography>
                 <img alt="Tukren Script" width="100%" src={FirstPillarFormatted}></img>
             </Box>
             <Grid container spacing={4}> 
                 <Grid item md={6}>
                     <Typography variant="h4" gutterBottom align="justify">
-                        IPA Tukrøn
+                        Latinized Tukrøn
                     </Typography>
                     <Typography variant="body1" gutterBottom align="justify">
                         yun dan'radren nirzlat dámis i'rohíren do'temf kint slamunk botk, gin kai do'temf werz zab'slitsdag cakunk. 
@@ -76,13 +81,9 @@ export default function ConLang(props) {
                     </Typography>
                 </Grid>
             </Grid>
-            <Grid container spacing={4}> 
-                <Grid item md={6}>
-                    <Typography variant="h4" gutterBottom align="justify">
-                        Translation Breakdown
-                    </Typography>
-                </Grid>
-            </Grid>
+            <Typography variant="h4" gutterBottom align="justify">
+                Translation Breakdown
+            </Typography>
             <TranslationTable/>
         </Box>
     );
