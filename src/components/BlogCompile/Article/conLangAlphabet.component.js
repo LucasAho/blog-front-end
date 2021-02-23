@@ -65,7 +65,7 @@ export default function ConLang(props) {
                         Latinized Tukrøn
                     </Typography>
                     <Typography variant="body1" gutterBottom align="justify">
-                        yun dan'radren nirzlat dámis i'rohíren do'temf kint slamunk botk, gin kai do'temf werz zab'slitsdag cakunk. 
+                        yun dan'radren nirzlat dámis i'rohíren do'temf kint slamunk bodk, gin kai do'temf werz zab'slitsdag cakunk. 
                         <br/>
                         <b>Pronounciation Guide:</b>
                         <br/>
@@ -81,9 +81,8 @@ export default function ConLang(props) {
                     </Typography>
                 </Grid>
             </Grid>
-            <Typography variant="h4">
-                Translation Breakdown
-            </Typography>
+            <Typography variant="h5">
+                Translation Breakdown By Part of Speech            </Typography>
             <TranslationTable/>
         </Box>
     );

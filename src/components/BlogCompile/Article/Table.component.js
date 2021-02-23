@@ -12,17 +12,13 @@ import { Box, Grid, Typography } from '@material-ui/core';
 const useStyles = makeStyles((theme) => createStyles({
     table: {
         minWidth: 700,
-
     },
     tableCell: {
         fontSize: '1.6rem',
-        //color: "#FFFFFF"
     }
 }));
 const StyledTableCell = withStyles((theme) => ({
     head: {
-        //backgroundColor: theme.palette.common.black,
-        //color: theme.palette.common.
         fontSize: "1.5rem",
     },
     body: {
@@ -32,23 +28,61 @@ const StyledTableCell = withStyles((theme) => ({
 
 }))(TableCell);
 
-function createData(tukren, literal, interpret) {
-    return { tukren, literal, interpret };
+function createData(tukren, literal, interpret, phrase) {
+    return { tukren, literal, interpret, phrase };
 }
 
 const rows = [
     createData(
-        "yun dan'radren nirzlat dámis ",
-        "For the Old Stone's ancient chamber search command",
-        "In the name of the divine search"),
+        "yun dan'radren",
+        "For the Old Stone's",
+        "In the name of",
+        "Preposition | Gentative Noun"),
     createData(
-        "i'rohíren do'temf kint slamunk botk",
-        "The facet of stone the colony may only expand (future habitual tense) downward",
-        "The people of stone may only expand the colony"),
+        "nirzlat dámis",
+        "ancient chamber search command",
+        "the divine search",
+        "Indirect Object"),
     createData(
-        "gin kai do'temf werz zab'slitsdag cakunk.",
-        "Lest we the colony into the unknown cavern lead(future habitual tense)",
-        "Lest we lead the colony into the unknowable cavern"),
+        "i'rohíren",
+        "the facets of stone",
+        "the people of stone",
+        "Subject"),
+    createData(
+        "do'temf",
+        "the Colony",
+        " --- ",
+        "Direct Object"),
+    createData(
+        "kint slamunk bodk",
+        "exclusively expand(downwards)(future habitual) must",
+        "must only deepen (Tukren verb 'slam' is directly used to say: digging the colony deeper)",
+        "Verbal Phrase"),
+    createData(
+        "gin",
+        "lest",
+        " --- ",
+        "Conjunction"),
+    createData(
+        "kai",
+        "we",
+        "---",
+        "Subject-Pronoun"),
+    createData(
+        "do'temf",
+        "the Colony", 
+        " --- ",
+        "Direct Object"),
+    createData(
+        "werz zab'slitsdag",
+        "into the unknown cavern",
+        "into the unknowable cavern(Tukren noun 'slitsdag' represents a chaotic entity) ",
+        "Preposition | Indirect Object"),
+    createData(
+        "cakunk",
+        "lead(a group)(future habitual)", 
+        "lead",
+        "Verb"),
 ];
 
 export default function TranslationTable() {
@@ -58,13 +92,17 @@ export default function TranslationTable() {
             <TableContainer component={Paper}>
                 <Table className={classes.table}>
                     <colgroup>
-                        <col width="33%"/>
+                        <col width="20%"/>
+                        <col width="30%"/>
+                        <col width="30%"/>
+                        <col width="20%"/>
                     </colgroup>
                     <TableHead>
                         <TableRow >
                             <StyledTableCell align="center"><b>Tukren</b></StyledTableCell>
                             <StyledTableCell align="center"><b>Literal Translation</b></StyledTableCell>
                             <StyledTableCell align="center"><b>Interpretation</b> </StyledTableCell>
+                            <StyledTableCell align="center"><b>Type</b> </StyledTableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -73,6 +111,7 @@ export default function TranslationTable() {
                                 <StyledTableCell component="th" scope="row">{row.tukren}</StyledTableCell>
                                 <StyledTableCell component="th" scope="row">{row.literal}</StyledTableCell>
                                 <StyledTableCell component="th" scope="row">{row.interpret} </StyledTableCell>
+                                <StyledTableCell component="th" scope="row">{row.phrase} </StyledTableCell>
                             </TableRow>
                         ))}
                     </TableBody>
