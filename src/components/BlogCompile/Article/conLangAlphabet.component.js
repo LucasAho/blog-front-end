@@ -69,7 +69,7 @@ export default function ConLang(props) {
                         <br/>
                         <b>Pronounciation Guide:</b>
                         <br/>
-                        yune dan-rad-REN neer-ZLAT DAH-mees ee-ro-HI-ren do-TEMF keent slam-OONK botk, geen kai do-TEMF wearz zab-sleets-DAG cak-OONK.
+                        yune dan-rad-REN neer-ZLAT DAH-mees ee-ro-HI-ren do-TEMF keent slam-OONK botk, geen kai do-TEMF wearz zab-sleets-DAG cak-OONK
                     </Typography>
                 </Grid> 
                 <Grid item md={6}>
@@ -81,7 +81,7 @@ export default function ConLang(props) {
                     </Typography>
                 </Grid>
             </Grid>
-            <Typography variant="h4" gutterBottom align="justify">
+            <Typography variant="h4">
                 Translation Breakdown
             </Typography>
             <TranslationTable/>

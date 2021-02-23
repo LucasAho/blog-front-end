@@ -31,7 +31,7 @@ export default function ArticleView(props) {
     return (
         <Box className={classes.root} mx='auto'>
             <Navbar />
-            <Grid container>
+            <Grid container spacing={2}>
                 <Grid item md={9}>
                     <RecentArticle
                         artObj={article}

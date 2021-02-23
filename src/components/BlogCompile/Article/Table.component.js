@@ -23,11 +23,13 @@ const StyledTableCell = withStyles((theme) => ({
     head: {
         //backgroundColor: theme.palette.common.black,
         //color: theme.palette.common.
-        fontSize: "1.5rem"
+        fontSize: "1.5rem",
     },
     body: {
         fontSize: "1.2rem",
+
     },
+
 }))(TableCell);
 
 function createData(tukren, literal, interpret) {
@@ -55,6 +57,9 @@ export default function TranslationTable() {
         <Box>
             <TableContainer component={Paper}>
                 <Table className={classes.table}>
+                    <colgroup>
+                        <col width="33%"/>
+                    </colgroup>
                     <TableHead>
                         <TableRow >
                             <StyledTableCell align="center"><b>Tukren</b></StyledTableCell>
