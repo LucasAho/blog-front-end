@@ -32,7 +32,7 @@ export default function ProjectBar() {
             <HeaderReusable
                 headText={"Portfolio"}
                 subText={"A showcase of skills cultivated in full stack web development. The following applications display proficiency in building out RESTful APIs, utilization of NODE.JS and React, comprehension of ES6, and competency in visual design."} 
-                variant={"p"}
+                variant={"body1"}
             />
             <Grid container align='center' className={classes.cardStack}>
                 <Grid item xs={12} sm={6} md={3}>

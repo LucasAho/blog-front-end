@@ -1,4 +1,4 @@
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
     palette: {
@@ -21,6 +21,9 @@ const theme = createMuiTheme({
         // two indexes within its tonal palette.
         // E.g., shift from Red 500 to Red 300 or Red 700.
         tonalOffset: 0.2,
+    },
+    typography: {
+        //fontSize: '2rem'
     },
     breakpoints: {
         values: {

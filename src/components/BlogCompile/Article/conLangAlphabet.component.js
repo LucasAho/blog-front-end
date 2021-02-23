@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { borders } from '@material-ui/system';
 import FirstPillarFormatted from "./../../MainCompile/imageAssets/FirstPillarFormatted.png";
 import Commandments from "./../../MainCompile/imageAssets/6Commands.png";
+import TranslationTable from './Table.component';
 
 const useStyles = makeStyles((theme) => createStyles({
     root: {
@@ -40,7 +41,14 @@ export default function ConLang(props) {
                     </Box>
                 </Grid>
             </Grid>
-            <Box pt="1rem" mx="auto" py='1rem' align="center" width="70%" mx="auto">
+            <Box pt="2rem" mx="auto" pb='1rem' align="center" width="100%"> 
+                <Typography variant="body1" align="left" paragraph>
+                    The religion celebrated across all known Rohíren colonies is broken into many sects, each separate colony celebrating the same god by various means. 
+                    The only absolute in these globe-spanning variants is their unbroken adherence to the 6 Pillars, a set of standards that the Rohíren kings and commonfolk alike 
+                    must follow, as one in our world might follow the 10 commandments or eightfold path. <br/> It is only by this faith that the colonies maintain uninterrupted progress towards their united goal: 
+                    uncovering the mythic chamber of the Old Stone and initiating a golden age for their species.
+                    While this is most likely mere superstition, these rules do provide an undeniable boon towards maintaining the colony's stability in their confined environments.
+                </Typography>
                 <Typography variant="h6" align="center" gutterBottom>
                     <i>The first of six pillars supporting Oradren's Temple.</i>
                 </Typography>
@@ -52,11 +60,11 @@ export default function ConLang(props) {
                         IPA Tukrøn
                     </Typography>
                     <Typography variant="body1" gutterBottom align="justify">
-                        jun dan'ɹadɹøn niɹɮat da:mis i'ɹohi:ɹøn do'tømf kint ɬamunk boɟ, gin kai do'tømf wøɹz zab'ɬitsdag cakunk. 
+                        yun dan'radren nirzlat dámis i'rohíren do'temf kint slamunk botk, gin kai do'temf werz zab'slitsdag cakunk. 
                         <br/>
                         <b>Pronounciation Guide:</b>
                         <br/>
-                        yune dan-rad-REN neer-ZLAT DAH-mees ee-ro-HI-ren do-TEMF keent slam-OONK botd, geen kai do-TEMF wearz zab-sleets-DAG ttak-OONK.
+                        yune dan-rad-REN neer-ZLAT DAH-mees ee-ro-HI-ren do-TEMF keent slam-OONK botk, geen kai do-TEMF wearz zab-sleets-DAG cak-OONK.
                     </Typography>
                 </Grid> 
                 <Grid item md={6}>
@@ -68,79 +76,14 @@ export default function ConLang(props) {
                     </Typography>
                 </Grid>
             </Grid>
-            <Grid container spacing={3}> 
-                <Grid item md={4}>
-                    <Typography variant="h5" align="center">
-                        Tukrøn Phrase
+            <Grid container spacing={4}> 
+                <Grid item md={6}>
+                    <Typography variant="h4" gutterBottom align="justify">
+                        Translation Breakdown
                     </Typography>
                 </Grid>
-                <Grid item md={4}>
-                    <Typography variant="h5" align="center">
-                        Literal Translation
-                    </Typography>
-                </Grid>
-                <Grid item md={4}>
-                    <Typography variant="h5" align="center">
-                        Interpretation
-                    </Typography>
-                </Grid>
-                <Grid item md={4}>
-                    <Typography variant="body1" align="justify">
-                        jun dan'ɹadɹøn niɹɮat da:mis 
-                    </Typography>
-                    <Typography variant="body1" gutterBottom align="justify">
-                        (yune dan-rad-REN near-ZLAT DAH-mees)
-                    </Typography>
-                </Grid> 
-                <Grid item sm={4}>
-                    <Typography variant="body1" gutterBottom align="justify">
-                        "For the Old Stone's ancient chamber search command" 
-                    </Typography>
-                </Grid>
-                <Grid item sm={4}>
-                    <Typography variant="body1" gutterBottom align="justify">
-                        "In the name of the search"
-                    </Typography>
-                </Grid>
-                <Grid item sm={4}>
-                    <Typography variant="body1" align="justify">
-                        i'ɹohi:ɹøn do'tømf kint ɬamunk boɟ 
-                    </Typography>
-                    <Typography variant="body1" gutterBottom align="justify">
-                        (ee-ro-HI-ren do-TEMF keent slam-OONK botd)
-                    </Typography>
-                </Grid> 
-                <Grid item sm={4}>
-                    <Typography variant="body1" gutterBottom align="justify">
-                        "The facet of stone the colony may only expand(future habitual tense)"
-                    </Typography>
-                </Grid>
-                <Grid item sm={4}>
-                    <Typography variant="body1" gutterBottom align="justify">
-                        "The people of stone may only expand upon the colony"
-                    </Typography>
-                </Grid> 
-                <Grid item sm={4}>
-                    <Typography variant="body1" align="justify">
-                        gin kai do'tømf wøɹz zab'ɬitsdag cakunk
-                    </Typography>
-                    <Typography variant="body1" gutterBottom align="justify">
-                        (geen kai do-TEMF wearz zab-sleets-DAG ttak-OONK)
-                    </Typography>
-                </Grid> 
-                <Grid item sm={4}>
-                    <Typography variant="body1" gutterBottom align="justify">
-                        Translated literally as: <br/>
-                        "Lest we the colony into the unknown cavern lead(future habitual tense)"
-                    </Typography>
-                </Grid>
-                <Grid item sm={4}>
-                    <Typography variant="body1" gutterBottom align="justify">
-                        But a better translation might be: <br/>
-                        "Lest we lead the colony into the unknowable cavern"
-                    </Typography>
-                </Grid> 
             </Grid>
+            <TranslationTable/>
         </Box>
     );
 }

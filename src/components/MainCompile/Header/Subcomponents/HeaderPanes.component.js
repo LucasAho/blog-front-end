@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Typography, Box, Grid } from '@material-ui/core';
 import { SliderData } from "./SliderData.component";
-import { makeStyles, createStyles } from '@material-ui/core/styles';
+import { makeStyles, createStyles, responsiveFontSizes } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => createStyles({
     //Header Classes
@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => createStyles({
     },
     bioText: {
         paddingTop: '1rem',
+        fontSize: '1.2rem'
         //color: "#EBE5F9",
     },
     
