@@ -49,7 +49,7 @@ export function MainCard() {
                         Episode 1
                     </Typography>
                     <Typography variant="subtitle1" color="textSecondary">
-                        Expected release date: Mar 5, 2021
+                        Expected release date: Mar 12, 2021
                     </Typography>
                 </CardContent>
                 <div className={classes.controls}>
